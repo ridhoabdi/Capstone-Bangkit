@@ -17,6 +17,7 @@ class HomeFragment : Fragment() {
     // This property is only valid between onCreateView and
     // onDestroyView.
     //hallo
+    //ini aku
     private val binding get() = _binding!!
 
     override fun onCreateView(
