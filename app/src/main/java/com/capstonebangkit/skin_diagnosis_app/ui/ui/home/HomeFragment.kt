@@ -18,6 +18,7 @@ class HomeFragment : Fragment() {
     // onDestroyView.
     //hallo
     //ini aku boi
+    //iya
     private val binding get() = _binding!!
 
     override fun onCreateView(
