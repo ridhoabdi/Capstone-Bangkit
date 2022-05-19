@@ -5,8 +5,10 @@
       <map>
         <entry key="..\:/android bangkit2022/capstone/app/src/main/res/layout/activity_main.xml" value="0.17552083333333332" />
         <entry key="..\:/android bangkit2022/capstone/app/src/main/res/layout/activity_main_home.xml" value="0.17552083333333332" />
+        <entry key="..\:/android bangkit2022/capstone/app/src/main/res/layout/bottom_navigation_main.xml" value="0.15833333333333333" />
         <entry key="..\:/android bangkit2022/capstone/app/src/main/res/layout/fragment_dashboard.xml" value="0.17552083333333332" />
         <entry key="..\:/android bangkit2022/capstone/app/src/main/res/layout/fragment_home.xml" value="0.1" />
+        <entry key="..\:/android bangkit2022/capstone/app/src/main/res/layout/fragment_saran.xml" value="0.17552083333333332" />
         <entry key="..\:/android bangkit2022/capstone/app/src/main/res/menu/bottom_nav_menu.xml" value="0.17552083333333332" />
       </map>
     </option>
