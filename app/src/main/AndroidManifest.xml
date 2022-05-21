@@ -9,10 +9,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Skin_Diagnosis_App">
-<!--        <activity-->
-<!--            android:name=".MainActivity"-->
-<!--            android:exported="false"-->
-<!--            android:label="@string/title_activity_main_home" />-->
+        <activity
+            android:name=".ui.Camera.CameraActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.MainActivity"
+            android:exported="false" /> <!-- <activity -->
+        <!-- android:name=".MainActivity" -->
+        <!-- android:exported="false" -->
+        <!-- android:label="@string/title_activity_main_home" /> -->
         <activity
             android:name=".ui.BottomNavigation"
             android:exported="true">

@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/Home_Frame"
     android:orientation="vertical"
     tools:context=".ui.ui.home.HomeFragment">
 
@@ -19,7 +20,7 @@
         android:padding="10dp">
         <!--cameraView-->
         <androidx.cardview.widget.CardView
-            android:onClick="cameraClick"
+            android:id="@+id/cameraAction"
             android:clickable="true"
             android:foreground="?attr/selectableItemBackground"
             android:layout_width="170dp"
