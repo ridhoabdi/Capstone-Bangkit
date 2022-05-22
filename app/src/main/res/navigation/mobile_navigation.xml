@@ -21,4 +21,5 @@
         android:name="com.capstonebangkit.skin_diagnosis_app.ui.ui.profile.ProfileFragment"
         android:label="@string/title_profile"
         tools:layout="@layout/fragment_profile" />
+
 </navigation>

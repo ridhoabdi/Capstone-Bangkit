@@ -1,12 +1,12 @@
-package com.capstonebangkit.skin_diagnosis_app.ui.Camera
+package com.capstonebangkit.skin_diagnosis_app.ui.DashboardUI.Panduan
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.capstonebangkit.skin_diagnosis_app.R
 
-class CameraActivity : AppCompatActivity() {
+class PanduanActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_camera)
+        setContentView(R.layout.activity_panduan)
     }
 }

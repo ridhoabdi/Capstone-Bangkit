@@ -11,4 +11,7 @@
     <string name="Desc_panduan">Panduan</string>
     <string name="Desc_deskripsi">Deskripsi</string>
     <string name="Desc_profile">Profile</string>
+
+    <!--camera-->
+    <string name="Title_camera">Camera</string>
 </resources>
