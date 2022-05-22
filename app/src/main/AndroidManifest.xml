@@ -10,6 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Skin_Diagnosis_App">
         <activity
+            android:name=".ui.ui.register.RegisterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.ui.login.LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.ui.welcome.WelcomeUserActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.DashboardUI.Description.DescriptionActivity"
             android:exported="false" />
         <activity
