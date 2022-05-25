@@ -2,6 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.capstonebangkit.skin_diagnosis_app">
 
+<!--camera-->
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,6 +13,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Skin_Diagnosis_App">
+        <activity
+            android:name=".ui.DashboardAction.XCamera.CameraActionActivity"
+            android:exported="false" />
         <activity
             android:name=".ui.ui.register.RegisterActivity"
             android:exported="false" />
@@ -20,20 +27,20 @@
             android:exported="false" />
         <activity
             android:name=".ui.DashboardUI.Description.DescriptionActivity"
-            android:label="@string/deskripsi"
-            android:exported="false" />
+            android:exported="false"
+            android:label="@string/deskripsi" />
         <activity
             android:name=".ui.DashboardUI.Upload.UploadActivity"
-            android:label="@string/upload"
-            android:exported="false" />
+            android:exported="false"
+            android:label="@string/upload" />
         <activity
             android:name=".ui.DashboardUI.Panduan.PanduanActivity"
-            android:label="@string/panduan"
-            android:exported="false" />
+            android:exported="false"
+            android:label="@string/panduan" />
         <activity
             android:name=".ui.DashboardUI.Camera.CameraActivity"
-            android:label="@string/camera"
-            android:exported="false" />
+            android:exported="false"
+            android:label="@string/camera" />
         <activity
             android:name=".ui.MainActivity"
             android:exported="true">
