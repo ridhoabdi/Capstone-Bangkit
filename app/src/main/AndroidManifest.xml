@@ -20,18 +20,22 @@
             android:exported="false" />
         <activity
             android:name=".ui.DashboardUI.Description.DescriptionActivity"
+            android:label="@string/deskripsi"
             android:exported="false" />
         <activity
             android:name=".ui.DashboardUI.Upload.UploadActivity"
+            android:label="@string/upload"
             android:exported="false" />
         <activity
             android:name=".ui.DashboardUI.Panduan.PanduanActivity"
+            android:label="@string/panduan"
             android:exported="false" />
         <activity
             android:name=".ui.DashboardUI.Camera.CameraActivity"
+            android:label="@string/camera"
             android:exported="false" />
         <activity
-            android:name=".ui.BottomNavigation"
+            android:name=".ui.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

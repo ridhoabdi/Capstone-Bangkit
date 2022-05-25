@@ -5,6 +5,12 @@
     <string name="title_saran">Saran</string>
     <string name="title_profile">profile</string>
 
+    <!--label-->
+    <string name="camera">Camera</string>
+    <string name="upload">Upload</string>
+    <string name="panduan">Panduan</string>
+    <string name="deskripsi">Deskripsi</string>
+
     <!--home-->
     <string name="Desc_camera">camera</string>
     <string name="Desc_upload">Upload Gambar</string>

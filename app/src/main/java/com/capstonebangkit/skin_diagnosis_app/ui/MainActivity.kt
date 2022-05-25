@@ -8,17 +8,18 @@ import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.capstonebangkit.skin_diagnosis_app.R
-import com.capstonebangkit.skin_diagnosis_app.databinding.BottomNavigationMainBinding
+import com.capstonebangkit.skin_diagnosis_app.databinding.ActivityMainBinding
 
 
-class BottomNavigation : AppCompatActivity() {
 
-    private lateinit var binding: BottomNavigationMainBinding
+class MainActivity : AppCompatActivity() {
+
+    private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        binding = BottomNavigationMainBinding.inflate(layoutInflater)
+        binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         val navView: BottomNavigationView = binding.navView
