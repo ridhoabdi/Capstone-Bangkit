@@ -40,5 +40,8 @@
     <string name="already_have_account">Sudah punya akun?</string>
     <string name="not_have_account">Belum punya akun</string>
 
+    <!-- dark mode -->
+    <string name="setting">Pengaturan</string>
+
 
 </resources>
