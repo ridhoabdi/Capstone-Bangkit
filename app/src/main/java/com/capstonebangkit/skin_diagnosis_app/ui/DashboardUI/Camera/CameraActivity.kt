@@ -80,4 +80,6 @@ class CameraActivity : AppCompatActivity() {
             binding.previewImageView.setImageBitmap(result)
         }
     }
+
+    // this is camera
 }
