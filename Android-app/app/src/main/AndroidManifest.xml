@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.capstonebangkit.skin_diagnosis_app">
+
+<!--camera-->
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Skin_Diagnosis_App">
+        <activity
+            android:name=".ui.DashboardAction.XCamera.CameraActionActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.ui.register.RegisterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.ui.login.LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.ui.welcome.WelcomeUserActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.DashboardUI.Description.DescriptionActivity"
+            android:exported="false"
+            android:label="@string/deskripsi" />
+        <activity
+            android:name=".ui.DashboardUI.Upload.UploadActivity"
+            android:exported="false"
+            android:label="@string/upload" />
+        <activity
+            android:name=".ui.DashboardUI.Panduan.PanduanActivity"
+            android:exported="false"
+            android:label="@string/panduan" />
+        <activity
+            android:name=".ui.DashboardUI.Camera.CameraActivity"
+            android:exported="false"
+            android:label="@string/camera" />
+        <activity
+            android:name=".ui.MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
