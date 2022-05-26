@@ -66,6 +66,7 @@ class CameraActionActivity : AppCompatActivity() {
 
 
     private fun startCamera() {
+
         val cameraProviderFuture = ProcessCameraProvider.getInstance(this)
 
         cameraProviderFuture.addListener({
@@ -88,8 +89,7 @@ class CameraActionActivity : AppCompatActivity() {
                 )
 
             } catch (exc: Exception) {
-                Toast.makeText(
-                    this,
+                Toast.makeText(this,
                     "Gagal memunculkan kamera.",
                     Toast.LENGTH_SHORT
                 ).show()
@@ -108,8 +108,7 @@ class CameraActionActivity : AppCompatActivity() {
             ContextCompat.getMainExecutor(this),
             object : ImageCapture.OnImageSavedCallback {
                 override fun onError(exc: ImageCaptureException) {
-                    Toast.makeText(
-                        this@CameraActionActivity,
+                    Toast.makeText(this@CameraActionActivity,
                         "Gagal mengambil gambar.",
                         Toast.LENGTH_SHORT
                     ).show()
@@ -128,4 +127,5 @@ class CameraActionActivity : AppCompatActivity() {
             }
         )
     }
+
 }
