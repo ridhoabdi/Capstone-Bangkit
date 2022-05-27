@@ -18,12 +18,13 @@
             android:exported="false" />
         <activity
             android:name=".ui.ui.register.RegisterActivity"
+            android:label="@string/register"
+            android:exported="false" />
+        <activity
+            android:name=".ui.MainActivity"
             android:exported="false" />
         <activity
             android:name=".ui.ui.login.LoginActivity"
-            android:exported="false" />
-        <activity
-            android:name=".ui.ui.welcome.WelcomeUserActivity"
             android:exported="false" />
         <activity
             android:name=".ui.DashboardUI.Description.DescriptionActivity"
@@ -42,7 +43,8 @@
             android:exported="false"
             android:label="@string/camera" />
         <activity
-            android:name=".ui.MainActivity"
+            android:name=".ui.ui.welcome.WelcomeUserActivity"
+            android:label="@string/login"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
