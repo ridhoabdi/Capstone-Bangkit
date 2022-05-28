@@ -1,13 +1,22 @@
 package com.capstonebangkit.skin_diagnosis_app.ui.ui.profile
 
+import android.content.Context
+import android.content.Intent
 import android.os.Bundle
+import android.view.*
+import androidx.appcompat.app.AppCompatDelegate
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import androidx.datastore.core.DataStore
+import androidx.datastore.preferences.core.Preferences
+import androidx.datastore.preferences.preferencesDataStore
+import androidx.lifecycle.ViewModelProvider
 import com.capstonebangkit.skin_diagnosis_app.R
 import com.capstonebangkit.skin_diagnosis_app.databinding.FragmentHomeBinding
 import com.capstonebangkit.skin_diagnosis_app.databinding.FragmentProfileBinding
+import com.capstonebangkit.skin_diagnosis_app.ui.datastore.SettingPreferences
+import com.capstonebangkit.skin_diagnosis_app.ui.settingtheme.SettingThemeActivity
+import com.capstonebangkit.skin_diagnosis_app.ui.settingtheme.Theme
+import com.capstonebangkit.skin_diagnosis_app.ui.settingtheme.ThemeViewModel
 
 
 class ProfileFragment : Fragment() {
@@ -33,4 +42,5 @@ class ProfileFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
     }
+
 }

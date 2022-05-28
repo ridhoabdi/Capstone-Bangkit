@@ -43,6 +43,7 @@
 
     <!-- dark mode -->
     <string name="setting">Pengaturan</string>
+    <string name="dark_mode">Mode gelap</string>
 
 
 </resources>
