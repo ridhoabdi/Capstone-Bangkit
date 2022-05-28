@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Patterns
+import android.view.View
 import android.widget.Toast
 import com.capstonebangkit.skin_diagnosis_app.databinding.ActivityRegisterBinding
 import com.capstonebangkit.skin_diagnosis_app.ui.ui.login.LoginActivity
@@ -59,6 +60,7 @@ class RegisterActivity : AppCompatActivity() {
     }
 
     private fun RegisterFirebase(nama: String, email: String, password: String) {
+        showLoading(true)
         auth.createUserWithEmailAndPassword(email, password)
             .addOnCompleteListener(this){
                 if (it.isSuccessful){
@@ -70,5 +72,9 @@ class RegisterActivity : AppCompatActivity() {
                 }
             }
 
+    }
+
+    private fun showLoading(isLoading: Boolean){
+        binding.progressBar.visibility = if (isLoading) View.VISIBLE else View.GONE
     }
 }

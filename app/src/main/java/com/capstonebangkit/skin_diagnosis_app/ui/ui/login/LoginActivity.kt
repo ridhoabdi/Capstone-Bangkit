@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Patterns
+import android.view.View
 import android.widget.Toast
 import com.capstonebangkit.skin_diagnosis_app.databinding.ActivityLoginBinding
 import com.capstonebangkit.skin_diagnosis_app.ui.MainActivity
@@ -58,6 +59,7 @@ class LoginActivity : AppCompatActivity() {
     }
 
     private fun LoginFirebase(email: String, password: String) {
+        showLoading(true)
         auth.signInWithEmailAndPassword(email, password)
             .addOnCompleteListener(this){
                 if (it.isSuccessful){
@@ -68,5 +70,9 @@ class LoginActivity : AppCompatActivity() {
                     Toast.makeText(this, "${it.exception?.message}", Toast.LENGTH_SHORT).show()
                 }
             }
+    }
+
+    private fun showLoading(isLoading: Boolean){
+        binding.progressBarLogin.visibility = if (isLoading) View.VISIBLE else View.GONE
     }
 }
