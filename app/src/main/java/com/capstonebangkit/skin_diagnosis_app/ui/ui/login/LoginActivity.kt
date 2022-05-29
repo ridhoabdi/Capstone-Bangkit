@@ -72,6 +72,14 @@ class LoginActivity : AppCompatActivity() {
             }
     }
 
+    override fun onStart() {
+        super.onStart()
+        if(auth.currentUser != null){
+            val intent = Intent(this,MainActivity::class.java)
+            startActivity(intent)
+        }
+    }
+
     private fun showLoading(isLoading: Boolean){
         binding.progressBarLogin.visibility = if (isLoading) View.VISIBLE else View.GONE
     }

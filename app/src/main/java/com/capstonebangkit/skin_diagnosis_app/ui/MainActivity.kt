@@ -22,10 +22,13 @@ import com.capstonebangkit.skin_diagnosis_app.ui.datastore.SettingPreferences
 import com.capstonebangkit.skin_diagnosis_app.ui.settingtheme.SettingThemeActivity
 import com.capstonebangkit.skin_diagnosis_app.ui.settingtheme.Theme
 import com.capstonebangkit.skin_diagnosis_app.ui.settingtheme.ThemeViewModel
+import com.capstonebangkit.skin_diagnosis_app.ui.ui.welcome.WelcomeUserActivity
+import com.google.firebase.auth.FirebaseAuth
 
 
 private val Context.dataStore: DataStore<Preferences> by preferencesDataStore(name = "settings")
 class MainActivity : AppCompatActivity() {
+    private lateinit var auth : FirebaseAuth
 
     private lateinit var binding: ActivityMainBinding
     private lateinit var themeViewModel: ThemeViewModel
@@ -35,6 +38,8 @@ class MainActivity : AppCompatActivity() {
 
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        auth = FirebaseAuth.getInstance()
 
         val navView: BottomNavigationView = binding.navView
 
@@ -63,12 +68,17 @@ class MainActivity : AppCompatActivity() {
     // run pilihan menu aplikasi github
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
-            R.id.setting -> {
+            R.id.mode -> {
                 val menuSetting = Intent(this, SettingThemeActivity::class.java)
                 startActivity(menuSetting)
                 return true
             }
-
+            R.id.Logout -> {
+                auth.signOut()
+                val menuSetting = Intent(this, WelcomeUserActivity::class.java)
+                startActivity(menuSetting)
+                return true
+            }
             else -> return true
         }
     }

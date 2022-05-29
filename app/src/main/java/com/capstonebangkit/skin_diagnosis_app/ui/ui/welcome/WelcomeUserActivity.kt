@@ -10,15 +10,19 @@ import android.view.View
 import android.view.WindowInsets
 import android.view.WindowManager
 import com.capstonebangkit.skin_diagnosis_app.databinding.ActivityWelcomeUserBinding
+import com.capstonebangkit.skin_diagnosis_app.ui.MainActivity
 import com.capstonebangkit.skin_diagnosis_app.ui.ui.login.LoginActivity
 import com.capstonebangkit.skin_diagnosis_app.ui.ui.register.RegisterActivity
+import com.google.firebase.auth.FirebaseAuth
 
 class WelcomeUserActivity : AppCompatActivity() {
+    lateinit var auth: FirebaseAuth
     private lateinit var binding: ActivityWelcomeUserBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityWelcomeUserBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        auth = FirebaseAuth.getInstance()
 
         setupView()
         setupAction()
@@ -67,6 +71,13 @@ class WelcomeUserActivity : AppCompatActivity() {
         AnimatorSet().apply {
             playSequentially(title, desc, together)
             start()
+        }
+    }
+    override fun onStart() {
+        super.onStart()
+        if(auth.currentUser != null){
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
         }
     }
 }

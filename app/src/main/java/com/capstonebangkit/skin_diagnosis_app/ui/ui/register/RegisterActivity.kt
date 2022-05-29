@@ -7,6 +7,7 @@ import android.util.Patterns
 import android.view.View
 import android.widget.Toast
 import com.capstonebangkit.skin_diagnosis_app.databinding.ActivityRegisterBinding
+import com.capstonebangkit.skin_diagnosis_app.ui.MainActivity
 import com.capstonebangkit.skin_diagnosis_app.ui.ui.login.LoginActivity
 import com.google.firebase.auth.FirebaseAuth
 class RegisterActivity : AppCompatActivity() {
@@ -72,6 +73,13 @@ class RegisterActivity : AppCompatActivity() {
                 }
             }
 
+    }
+    override fun onStart() {
+        super.onStart()
+        if(auth.currentUser != null){
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     private fun showLoading(isLoading: Boolean){
