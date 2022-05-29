@@ -44,6 +44,7 @@
     <!-- dark mode -->
     <string name="setting">Pengaturan</string>
     <string name="dark_mode">Mode gelap</string>
+    <string name="logout">keluar</string>
 
 
 </resources>
