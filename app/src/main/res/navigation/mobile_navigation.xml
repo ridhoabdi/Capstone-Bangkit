@@ -16,6 +16,7 @@
         android:name="com.capstonebangkit.skin_diagnosis_app.ui.ui.saran.SaranFragment"
         android:label="@string/title_saran"
         tools:layout="@layout/fragment_saran" />
+
     <fragment
         android:id="@+id/navigation_profile"
         android:name="com.capstonebangkit.skin_diagnosis_app.ui.ui.profile.ProfileFragment"

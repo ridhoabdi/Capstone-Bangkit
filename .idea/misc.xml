@@ -18,13 +18,19 @@
         <entry key="..\:/android bangkit2022/capstone/Capstone-Bangkit/app/src/main/res/layout/fragment_profile.xml" value="0.16666666666666666" />
         <entry key="..\:/android bangkit2022/capstone/Capstone-Bangkit/app/src/main/res/menu/bottom_nav_menu.xml" value="0.1796875" />
         <entry key="..\:/android bangkit2022/capstone/Capstone-Bangkit/app/src/main/res/menu/setting.xml" value="0.1796875" />
+        <entry key="..\:/android bangkit2022/capstone/app/src/main/res/drawable/edit_text_shadow.xml" value="0.184" />
+        <entry key="..\:/android bangkit2022/capstone/app/src/main/res/drawable/ic_baseline_account_circle_24.xml" value="0.1" />
         <entry key="..\:/android bangkit2022/capstone/app/src/main/res/drawable/ic_baseline_account_menu.xml" value="0.1125" />
         <entry key="..\:/android bangkit2022/capstone/app/src/main/res/drawable/ic_baseline_home_menu.xml" value="0.104" />
         <entry key="..\:/android bangkit2022/capstone/app/src/main/res/drawable/ic_baseline_logout.xml" value="0.163" />
         <entry key="..\:/android bangkit2022/capstone/app/src/main/res/drawable/ic_baseline_settings.xml" value="0.1675" />
         <entry key="..\:/android bangkit2022/capstone/app/src/main/res/drawable/ic_dashboard_black_24dp.xml" value="0.104" />
+        <entry key="..\:/android bangkit2022/capstone/app/src/main/res/drawable/outline_send_24.xml" value="0.176" />
+        <entry key="..\:/android bangkit2022/capstone/app/src/main/res/drawable/rounded_message_blue.xml" value="0.174" />
+        <entry key="..\:/android bangkit2022/capstone/app/src/main/res/drawable/rounded_message_yellow.xml" value="0.1" />
         <entry key="..\:/android bangkit2022/capstone/app/src/main/res/layout/activity_camera.xml" value="0.17552083333333332" />
         <entry key="..\:/android bangkit2022/capstone/app/src/main/res/layout/activity_description.xml" value="0.17552083333333332" />
+        <entry key="..\:/android bangkit2022/capstone/app/src/main/res/layout/activity_login.xml" value="0.16032608695652173" />
         <entry key="..\:/android bangkit2022/capstone/app/src/main/res/layout/activity_main.xml" value="0.17552083333333332" />
         <entry key="..\:/android bangkit2022/capstone/app/src/main/res/layout/activity_main_home.xml" value="0.17552083333333332" />
         <entry key="..\:/android bangkit2022/capstone/app/src/main/res/layout/activity_panduan.xml" value="0.17552083333333332" />
@@ -35,6 +41,7 @@
         <entry key="..\:/android bangkit2022/capstone/app/src/main/res/layout/fragment_home.xml" value="0.1" />
         <entry key="..\:/android bangkit2022/capstone/app/src/main/res/layout/fragment_profile.xml" value="0.17552083333333332" />
         <entry key="..\:/android bangkit2022/capstone/app/src/main/res/layout/fragment_saran.xml" value="0.17552083333333332" />
+        <entry key="..\:/android bangkit2022/capstone/app/src/main/res/layout/item_message.xml" value="0.17552083333333332" />
         <entry key="..\:/android bangkit2022/capstone/app/src/main/res/menu/bottom_nav_menu.xml" value="0.17552083333333332" />
         <entry key="..\:/androidbangkit2022/capstone/Capstone-Bangkit/app/src/main/res/layout/activity_login.xml" value="0.16666666666666666" />
         <entry key="..\:/androidbangkit2022/capstone/Capstone-Bangkit/app/src/main/res/layout/activity_register.xml" value="0.16666666666666666" />

@@ -13,4 +13,8 @@
 
     <color name="hijaumuda">#02FF95</color>
     <color name="hijautua">#2FA674</color>
+    <color name="firebase_gray">#ECEFF1</color>
+    <color name="firebase_orange">#F57C00</color>
+    <color name="firebase_yellow">#FFCA28</color>
+    <color name="firebase_blue">#039BE5</color>
 </resources>

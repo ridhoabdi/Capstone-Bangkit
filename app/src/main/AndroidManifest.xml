@@ -15,6 +15,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Skin_Diagnosis_App">
         <activity
+            android:name=".ui.ui.message.MassageActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.settingtheme.SettingThemeActivity"
             android:exported="false" />
         <activity

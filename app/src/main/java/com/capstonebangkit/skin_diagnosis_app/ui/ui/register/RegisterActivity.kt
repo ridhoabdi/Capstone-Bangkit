@@ -62,7 +62,7 @@ class RegisterActivity : AppCompatActivity() {
 
     private fun RegisterFirebase(nama: String, email: String, password: String) {
         showLoading(true)
-        auth.createUserWithEmailAndPassword(email, password)
+        auth.createUserWithEmailAndPassword( email, password)
             .addOnCompleteListener(this){
                 if (it.isSuccessful){
                     Toast.makeText(this, "Register Berhasil",  Toast.LENGTH_SHORT).show()

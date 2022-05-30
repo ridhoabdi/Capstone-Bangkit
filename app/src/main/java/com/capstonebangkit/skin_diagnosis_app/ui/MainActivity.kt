@@ -24,21 +24,22 @@ import com.capstonebangkit.skin_diagnosis_app.ui.settingtheme.Theme
 import com.capstonebangkit.skin_diagnosis_app.ui.settingtheme.ThemeViewModel
 import com.capstonebangkit.skin_diagnosis_app.ui.ui.welcome.WelcomeUserActivity
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.ktx.Firebase
 
 
 private val Context.dataStore: DataStore<Preferences> by preferencesDataStore(name = "settings")
 class MainActivity : AppCompatActivity() {
     private lateinit var auth : FirebaseAuth
-
     private lateinit var binding: ActivityMainBinding
     private lateinit var themeViewModel: ThemeViewModel
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
         auth = FirebaseAuth.getInstance()
 
         val navView: BottomNavigationView = binding.navView
@@ -51,6 +52,7 @@ class MainActivity : AppCompatActivity() {
                 R.id.navigation_home, R.id.navigation_saran, R.id.navigation_profile
             )
         )
+
 
         val pref = SettingPreferences.getInstance(dataStore)
         themeViewModel = ViewModelProvider(this, Theme(pref))[ThemeViewModel::class.java]
