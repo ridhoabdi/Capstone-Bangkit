@@ -60,12 +60,13 @@ class ProfileFragment : Fragment() {
         return root
 
     }
-
+    
 //    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
 //        super.onViewCreated(view, savedInstanceState)
 //
 //
 //    }
+    //option menu
 }
 
 
