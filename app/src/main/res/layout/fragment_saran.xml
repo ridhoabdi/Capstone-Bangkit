@@ -54,6 +54,7 @@
         android:layout_width="match_parent"
         android:layout_height="586dp"
         android:layout_above="@+id/linearLayout"
+        android:layout_marginTop="0dp"
         android:layout_marginBottom="1dp"
         android:background="@android:color/white" />
 </RelativeLayout>
