@@ -12,6 +12,7 @@ import com.capstonebangkit.skin_diagnosis_app.ui.ui.login.LoginActivity
 import com.google.firebase.auth.FirebaseAuth
 class RegisterActivity : AppCompatActivity() {
 
+    //deskripsi
     lateinit var binding: ActivityRegisterBinding
     lateinit var auth: FirebaseAuth
 
