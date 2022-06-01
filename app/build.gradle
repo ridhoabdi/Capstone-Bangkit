@@ -77,5 +77,8 @@ dependencies {
     //circle
     implementation 'de.hdodenhof:circleimageview:3.1.0'
 
+    // view pager2
+    implementation "androidx.viewpager2:viewpager2:1.0.0"
+
 
 }

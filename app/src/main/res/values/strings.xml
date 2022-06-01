@@ -45,9 +45,16 @@
     <string name="setting">Pengaturan</string>
     <string name="dark_mode">Mode gelap</string>
     <string name="logout">keluar</string>
-
     <string name="send_success">Berhasil terkirim</string>
     <string name="send_error">Gagal terkirim</string>
+
+    <!-- panduan -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="tab_text_1">Camera</string>
+    <string name="tab_text_2">Upload</string>
+    <string name="content_tab_camera">Panduan dengan camera</string>
+    <string name="content_tab_upload">Panduan dengan upload</string>
+    <string name="content_tab_text">This is Tab %1$d</string>
 
 
 </resources>
