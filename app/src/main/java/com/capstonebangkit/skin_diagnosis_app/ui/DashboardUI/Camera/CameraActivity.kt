@@ -15,11 +15,22 @@ import com.capstonebangkit.skin_diagnosis_app.R
 import com.capstonebangkit.skin_diagnosis_app.databinding.ActivityCameraBinding
 import com.capstonebangkit.skin_diagnosis_app.databinding.ActivityMainBinding
 import com.capstonebangkit.skin_diagnosis_app.ui.DashboardAction.XCamera.CameraActionActivity
+import com.capstonebangkit.skin_diagnosis_app.ui.DashboardUI.Deteksi.ScanActivity
+import com.capstonebangkit.skin_diagnosis_app.ui.DataApi.ApiConfig
+import com.capstonebangkit.skin_diagnosis_app.ui.response.ApiResponse
 import com.capstonebangkit.skin_diagnosis_app.ui.utils.rotateBitmap
+import okhttp3.MediaType.Companion.toMediaType
+import okhttp3.MediaType.Companion.toMediaTypeOrNull
+import okhttp3.MultipartBody
+import okhttp3.RequestBody.Companion.asRequestBody
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 import java.io.File
 
 class CameraActivity : AppCompatActivity() {
     private lateinit var binding: ActivityCameraBinding
+    private var getFile: File? = null
     companion object {
         const val CAMERA_X_RESULT = 200
 
@@ -66,7 +77,47 @@ class CameraActivity : AppCompatActivity() {
 
     //upload prediction
     private fun startPrediction() {
+        showLoading(true)
+        if (getFile != null) {
+            val file = getFile as File
+            val requestImageFile = file.asRequestBody("image/jpeg".toMediaTypeOrNull())
+            val imageMultipart: MultipartBody.Part = MultipartBody.Part.createFormData(
+                "photo",
+                file.name,
+                requestImageFile
+            )
+            val client = ApiConfig.getApiServiceCamera()
+                .uploadimage(imageMultipart)
+            client.enqueue(object : Callback<ApiResponse> {
+                override fun onResponse(call: Call<ApiResponse>, response: Response<ApiResponse>) {
+                    showLoading(false)
+                    val responseBody = response.body()
+                    if (response.isSuccessful && responseBody?.message == "Image created successfully") {
+                        Toast.makeText(this@CameraActivity,
+                            getString(R.string.upload_sukses),
+                            Toast.LENGTH_SHORT
+                        ).show()
+                        val intent = Intent(this@CameraActivity, ScanActivity::class.java)
+                        startActivity(intent)
+                        finish()
+                    } else {
+                        Toast.makeText(this@CameraActivity,
+                            getString(R.string.Upload_Gagal),
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
 
+                }
+
+                override fun onFailure(call: Call<ApiResponse>, t: Throwable) {
+                    showLoading(false)
+                    Toast.makeText(this@CameraActivity,
+                        getString(R.string.Upload_Gagal),
+                        Toast.LENGTH_SHORT
+                    ).show()
+                }
+            })
+        }
     }
 
     private fun startCameraX() {

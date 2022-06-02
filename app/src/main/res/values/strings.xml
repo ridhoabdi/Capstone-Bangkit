@@ -55,6 +55,8 @@
     <string name="content_tab_camera">Panduan dengan camera</string>
     <string name="content_tab_upload">Panduan dengan upload</string>
     <string name="content_tab_text">This is Tab %1$d</string>
+    <string name="upload_sukses">sukses upload</string>
+    <string name="Upload_Gagal">Gagal Upload</string>
 
 
 </resources>
