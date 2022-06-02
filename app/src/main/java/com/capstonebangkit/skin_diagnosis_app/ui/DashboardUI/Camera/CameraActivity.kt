@@ -16,9 +16,13 @@ import com.capstonebangkit.skin_diagnosis_app.databinding.ActivityCameraBinding
 import com.capstonebangkit.skin_diagnosis_app.databinding.ActivityMainBinding
 import com.capstonebangkit.skin_diagnosis_app.ui.DashboardAction.XCamera.CameraActionActivity
 import com.capstonebangkit.skin_diagnosis_app.ui.utils.rotateBitmap
+import okhttp3.MediaType.Companion.toMediaTypeOrNull
+import okhttp3.MultipartBody
+import okhttp3.RequestBody.Companion.asRequestBody
 import java.io.File
 
 class CameraActivity : AppCompatActivity() {
+    private var getFile: File? = null
     private lateinit var binding: ActivityCameraBinding
     companion object {
         const val CAMERA_X_RESULT = 200
@@ -66,7 +70,18 @@ class CameraActivity : AppCompatActivity() {
 
     //upload prediction
     private fun startPrediction() {
-        TODO("Not yet implemented")
+        showLoading(true)
+        if (getFile != null) {
+            val file = getFile as File
+            val requestImageFile = file.asRequestBody("image/jpeg".toMediaTypeOrNull())
+            val imageMultipart: MultipartBody.Part = MultipartBody.Part.createFormData(
+                "photo",
+                file.name,
+                requestImageFile
+            )
+
+
+        }
     }
 
     private fun startCameraX() {
