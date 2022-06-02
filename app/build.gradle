@@ -73,12 +73,18 @@ dependencies {
     implementation 'com.google.android.gms:play-services-auth:20.1.0'
     implementation 'com.firebaseui:firebase-ui-database:8.0.0'
     implementation 'com.github.bumptech.glide:glide:4.12.0'
+    implementation 'com.google.firebase:firebase-storage-ktx'
 
     //circle
     implementation 'de.hdodenhof:circleimageview:3.1.0'
 
     // view pager2
     implementation "androidx.viewpager2:viewpager2:1.0.0"
+
+    // Tensorflow lite dependencies
+    implementation 'org.tensorflow:tensorflow-lite:2.8.0'
+    implementation 'org.tensorflow:tensorflow-lite-gpu:2.8.0'
+    implementation 'org.tensorflow:tensorflow-lite-support:2.8.0'
 
 
 }
