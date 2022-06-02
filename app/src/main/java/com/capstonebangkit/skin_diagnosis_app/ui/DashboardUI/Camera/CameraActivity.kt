@@ -6,6 +6,7 @@ import android.content.pm.PackageManager
 import android.graphics.BitmapFactory
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.app.ActivityCompat
@@ -57,7 +58,15 @@ class CameraActivity : AppCompatActivity() {
                 REQUEST_CODE_PERMISSIONS
             )
         }
+        //action camera
         binding.cameraXButton.setOnClickListener { startCameraX() }
+        //action posting
+        binding.uploadButton.setOnClickListener { startPrediction() }
+    }
+
+    //upload prediction
+    private fun startPrediction() {
+        TODO("Not yet implemented")
     }
 
     private fun startCameraX() {
@@ -82,4 +91,10 @@ class CameraActivity : AppCompatActivity() {
     }
 
     // this is camera
+
+
+    //show loading
+    private fun showLoading(isLoading: Boolean) {
+        binding.progressBar.visibility = if (isLoading) View.VISIBLE else View.GONE
+    }
 }
