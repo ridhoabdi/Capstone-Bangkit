@@ -66,7 +66,7 @@ class CameraActivity : AppCompatActivity() {
 
     //upload prediction
     private fun startPrediction() {
-        TODO("Not yet implemented")
+
     }
 
     private fun startCameraX() {
