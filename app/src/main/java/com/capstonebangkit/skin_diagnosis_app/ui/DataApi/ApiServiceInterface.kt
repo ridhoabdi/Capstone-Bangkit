@@ -12,6 +12,6 @@ interface ApiServiceInterface {
     @Multipart
     @POST("Upload")
     fun uploadimage(
-        @Part file: MultipartBody.Part,
+        @Part file: MultipartBody.Part ,
     ): Call<ApiResponse>
 }
