@@ -100,7 +100,7 @@ class CameraActivity : AppCompatActivity() {
 
             val requestImageFile = file.asRequestBody("image/jpeg".toMediaTypeOrNull())
             val imageMultipart: MultipartBody.Part = MultipartBody.Part.createFormData(
-                "photo",
+                "file",
                 file.name,
                 requestImageFile
             )
