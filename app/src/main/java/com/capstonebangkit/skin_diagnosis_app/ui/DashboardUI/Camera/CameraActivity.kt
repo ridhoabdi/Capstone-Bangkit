@@ -102,42 +102,18 @@ class CameraActivity : AppCompatActivity() {
                 file.name,
                 requestImageFile
             )
-//            val data = imageMultipart
-//            val client = OkHttpClient()
-//            val request = Request.Builder()
-//                .method("POST",data)
-//                .url("http://192.168.0.117:5000/")
-//                .build()
-//            client.newCall(request).enqueue(object : Callback {
-//                override fun onFailure(call: Call, e: IOException) {
-//                    e.printStackTrace()
-//                }
-//
-//                override fun onResponse(call: Call, response: Response) {
-////                    val responseBody = response.body
-//                    if (response.isSuccessful) {
-//                        Toast.makeText(this@CameraActivity,
-//                            getString(R.string.upload_sukses),
-//                            Toast.LENGTH_SHORT
-//                        ).show()
-//                        val intent = Intent(this@CameraActivity, ScanActivity::class.java)
-//                        startActivity(intent)
-//                        finish()
-//                    } else {
-//                        Toast.makeText(this@CameraActivity,
-//                            getString(R.string.Upload_Gagal),
-//                            Toast.LENGTH_SHORT
-//                        ).show()
-//                    }
-//                }
-//
-//            })
-            val client = ApiConfig.getApiServiceCamera().uploadimage(imageMultipart)
-            client.enqueue(object : retrofit2.Callback<ApiResponse> {
-                override fun onResponse(call: Call<ApiResponse>, response: Response<ApiResponse>) {
-                    showLoading(false)
-                    val responseBody = response.body()
-                    if (response.isSuccessful && responseBody?.message == "Image created successfully") {
+            val data = requestImageFile
+            val client = OkHttpClient()
+            val request = Request.Builder().url("http://192.168.0.117:5000/")
+                .post(data)
+                .build();
+            client.newCall(request).enqueue(object :Callback {
+                override fun onFailure(call: okhttp3.Call, e: IOException) {
+                    e.printStackTrace()
+                }
+
+                override fun onResponse(call: okhttp3.Call, response: okhttp3.Response) {
+                    if (response.isSuccessful) {
                         Toast.makeText(this@CameraActivity,
                             getString(R.string.upload_sukses),
                             Toast.LENGTH_SHORT
@@ -153,14 +129,66 @@ class CameraActivity : AppCompatActivity() {
                     }
                 }
 
-                override fun onFailure(call: Call<ApiResponse>, t: Throwable) {
-                    showLoading(false)
-                    Toast.makeText(this@CameraActivity,
-                        getString(R.string.Upload_Gagal),
-                        Toast.LENGTH_SHORT
-                    ).show()
-                }
             })
+//            val request = Request.Builder()
+//                .method("POST",data)
+//                .url("http://192.168.0.117:5000/")
+//                .build()
+//            client.newCall(request).enqueue(object : Callback {
+//                override fun onFailure(call: okhttp3.Call, e: IOException) {
+//                    Toast.makeText(this@CameraActivity,
+//                        getString(R.string.Upload_Gagal),
+//                        Toast.LENGTH_SHORT
+//                    ).show()
+//                }
+//
+//                override fun onResponse(call: okhttp3.Call, response: okhttp3.Response) {
+//                    val responseBody = response.body
+//                    if (response.isSuccessful) {
+//                        Toast.makeText(this@CameraActivity,
+//                            getString(R.string.upload_sukses),
+//                            Toast.LENGTH_SHORT
+//                        ).show()
+//                        val intent = Intent(this@CameraActivity, ScanActivity::class.java)
+//                        startActivity(intent)
+//                        finish()
+//                    } else {
+//                        Toast.makeText(this@CameraActivity,
+//                            getString(R.string.Upload_Gagal),
+//                            Toast.LENGTH_SHORT
+//                        ).show()
+//                    }
+//                }
+//            })
+//            val client = ApiConfig.getApiServiceCamera().uploadimage(imageMultipart)
+//            client.enqueue(object : retrofit2.Callback<ApiResponse> {
+//                override fun onResponse(call: Call<ApiResponse>, response: Response<ApiResponse>) {
+//                    showLoading(false)
+//                    val responseBody = response.body()
+//                    if (response.isSuccessful && responseBody?.message == "Image created successfully") {
+//                        Toast.makeText(this@CameraActivity,
+//                            getString(R.string.upload_sukses),
+//                            Toast.LENGTH_SHORT
+//                        ).show()
+//                        val intent = Intent(this@CameraActivity, ScanActivity::class.java)
+//                        startActivity(intent)
+//                        finish()
+//                    } else {
+//                        Toast.makeText(this@CameraActivity,
+//                            getString(R.string.Upload_Gagal),
+//                            Toast.LENGTH_SHORT
+//                        ).show()
+//                    }
+//                }
+//
+//                override fun onFailure(call: Call<ApiResponse>, t: Throwable) {
+//                    showLoading(false)
+//                    Toast.makeText(this@CameraActivity,
+//                        getString(R.string.Upload_Gagal),
+//                        Toast.LENGTH_SHORT
+//                    ).show()
+//                }
+//            })
         }
     }
 
