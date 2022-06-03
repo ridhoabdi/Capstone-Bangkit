@@ -8,6 +8,7 @@ import json
 # https: // stackoverflow.com/questions/53684971/assertion-failed-flask-server-stops-after-script-is-run
 # matplotlib.use('Agg')
 
+
 def get_category(img):
     """Write a Function to Predict the Class Name
     Args:
@@ -24,7 +25,7 @@ def get_category(img):
     # Expand img dimensions from (224, 224, 3) to (1, 224, 224, 3) for set_tensor method call
     img = np.expand_dims(img, axis=0)
 
-    tflite_model_file = 'N:/A PROJECT S1/Semester 6/1. BANGKIT/Capstone ML/Skin-Diagnose2/2skin_model.tflite'
+    tflite_model_file = 'D:/android bangkit2022/capstone/Flask-Dir/2skin_model.tflite'
 
     with open(tflite_model_file, 'rb') as fid:
         tflite_model = fid.read()
@@ -34,8 +35,7 @@ def get_category(img):
 
     input_index = interpreter.get_input_details()[0]["index"]
     output_index = interpreter.get_output_details()[0]["index"]
-    
-    
+
     interpreter.set_tensor(input_index, img)
     interpreter.invoke()
     prediction = interpreter.get_tensor(output_index)
@@ -43,8 +43,9 @@ def get_category(img):
     predicted_label = np.argmax(prediction)
     persentase = "{:.2f}".format(np.max(prediction)*100)
     class_names = ['chickenpox', 'Scabies']
-    
+
     return class_names[predicted_label], persentase
+
 
 def plot_category(img, current_time):
     """Plot the input image. Timestamp used to help Flask grab the correct image.
@@ -66,4 +67,3 @@ def plot_category(img, current_time):
         os.remove(strFile)
     # Save the image with the file name that result.html is using as its img src
     plt.savefig(strFile)
-
