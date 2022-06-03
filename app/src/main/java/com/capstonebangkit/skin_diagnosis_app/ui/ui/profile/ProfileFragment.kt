@@ -18,9 +18,9 @@ import com.capstonebangkit.skin_diagnosis_app.R
 import com.capstonebangkit.skin_diagnosis_app.databinding.FragmentHomeBinding
 import com.capstonebangkit.skin_diagnosis_app.databinding.FragmentProfileBinding
 import com.capstonebangkit.skin_diagnosis_app.ui.datastore.SettingPreferences
-import com.capstonebangkit.skin_diagnosis_app.ui.settingtheme.SettingThemeActivity
-import com.capstonebangkit.skin_diagnosis_app.ui.settingtheme.Theme
-import com.capstonebangkit.skin_diagnosis_app.ui.settingtheme.ThemeViewModel
+//import com.capstonebangkit.skin_diagnosis_app.ui.settingtheme.SettingThemeActivity
+//import com.capstonebangkit.skin_diagnosis_app.ui.settingtheme.Theme
+//import com.capstonebangkit.skin_diagnosis_app.ui.settingtheme.ThemeViewModel
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.database.FirebaseDatabase
@@ -28,16 +28,10 @@ import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase
 import java.util.*
 
-
+//private val Context.dataStore: DataStore<Preferences> by preferencesDataStore(name = "settings")
 class ProfileFragment : Fragment() {
     private lateinit var auth: FirebaseAuth
     private var _binding: FragmentProfileBinding? = null
-
-    // This property is only valid between onCreateView and
-    // onDestroyView.
-    //hallo
-    //ini aku boi
-    //iya
     private val binding get() = _binding!!
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
@@ -57,16 +51,11 @@ class ProfileFragment : Fragment() {
             textViewProfile.setText(firebaseUser.email.toString()).toString()
         }
 
+
         return root
 
     }
 
-//    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-//        super.onViewCreated(view, savedInstanceState)
-//
-//
-//    }
-    //option menu
 }
 
 

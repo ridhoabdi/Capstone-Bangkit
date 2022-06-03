@@ -41,10 +41,13 @@
     <string name="already_have_account">Sudah punya akun?</string>
     <string name="not_have_account">Belum punya akun</string>
 
-    <!-- dark mode -->
+    <!-- profile -->
     <string name="setting">Pengaturan</string>
     <string name="dark_mode">Mode gelap</string>
-    <string name="logout">keluar</string>
+    <string name="logout">Keluar</string>
+    <string name="language">Bahasa</string>
+    <string name="about_us">Tentang kami</string>
+
     <string name="send_success">Berhasil terkirim</string>
     <string name="send_error">Gagal terkirim</string>
 

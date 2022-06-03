@@ -7,16 +7,20 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-<!--    <color name="bgBottom">#02FF95</color>-->
-<!--    <color name="bgTheme">#02FF95</color>-->
+
     <color name="bgBottom">#0D3D6B</color>
     <color name="bgTheme">#0D3D6B</color>
     <color name="birumuda">#65ACD6</color>
     <color name="biru">#031BED</color>
-    <color name="hijaumuda">#02FF95</color>
-    <color name="hijautua">#2FA674</color>
+<!--    <color name="hijaumuda">#02FF95</color>-->
+<!--    <color name="hijautua">#2FA674</color>-->
+
     <color name="firebase_gray">#ECEFF1</color>
     <color name="firebase_orange">#F57C00</color>
     <color name="firebase_yellow">#FFCA28</color>
     <color name="firebase_blue">#039BE5</color>
+
+    <color name="night_mode">#6124B1</color>
+    <color name="bg_option_profile">#D8E7F1</color>
+    <color name="grey">#99FFFF</color>
 </resources>
