@@ -18,6 +18,7 @@ import com.capstonebangkit.skin_diagnosis_app.R
 import com.capstonebangkit.skin_diagnosis_app.databinding.FragmentHomeBinding
 import com.capstonebangkit.skin_diagnosis_app.databinding.FragmentProfileBinding
 import com.capstonebangkit.skin_diagnosis_app.ui.datastore.SettingPreferences
+import com.capstonebangkit.skin_diagnosis_app.ui.ui.welcome.WelcomeUserActivity
 //import com.capstonebangkit.skin_diagnosis_app.ui.settingtheme.SettingThemeActivity
 //import com.capstonebangkit.skin_diagnosis_app.ui.settingtheme.Theme
 //import com.capstonebangkit.skin_diagnosis_app.ui.settingtheme.ThemeViewModel
@@ -51,9 +52,26 @@ class ProfileFragment : Fragment() {
             textViewProfile.setText(firebaseUser.email.toString()).toString()
         }
 
-
         return root
 
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        // logout
+        binding.logOut.setOnClickListener {
+            logoutButton()
+        }
+
+    }
+
+    private fun logoutButton() {
+        auth = FirebaseAuth.getInstance()
+        auth.signOut()
+        val i = Intent(context, WelcomeUserActivity::class.java)
+        startActivity(i)
+        activity?.finish()
     }
 
 }
