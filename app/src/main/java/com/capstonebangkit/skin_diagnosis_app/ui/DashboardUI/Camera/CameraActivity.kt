@@ -20,6 +20,7 @@ import com.capstonebangkit.skin_diagnosis_app.ui.DashboardUI.Deteksi.ScanActivit
 import com.capstonebangkit.skin_diagnosis_app.ui.DataApi.ApiConfig
 import com.capstonebangkit.skin_diagnosis_app.ui.response.ApiResponse
 import com.capstonebangkit.skin_diagnosis_app.ui.utils.createTempFile
+import com.capstonebangkit.skin_diagnosis_app.ui.utils.reduceFileImage
 import okhttp3.*
 import okhttp3.MediaType.Companion.toMediaTypeOrNull
 import okhttp3.RequestBody.Companion.asRequestBody
@@ -92,7 +93,7 @@ class CameraActivity : AppCompatActivity() {
     private fun startPrediction() {
         showLoading(true)
         if (getFile != null) {
-            val file = getFile as File
+            val file = reduceFileImage(getFile as File)
 
             val requestImageFile = file.asRequestBody("image/jpeg".toMediaTypeOrNull())
             val imageMultipart: MultipartBody.Part = MultipartBody.Part.createFormData(
