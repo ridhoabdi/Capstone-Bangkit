@@ -94,7 +94,6 @@ class CameraActivity : AppCompatActivity() {
         showLoading(true)
         if (getFile != null) {
             val file = reduceFileImage(getFile as File)
-
             val requestImageFile = file.asRequestBody("image/jpeg".toMediaTypeOrNull())
             val imageMultipart: MultipartBody.Part = MultipartBody.Part.createFormData(
                 "file",
@@ -132,22 +131,11 @@ class CameraActivity : AppCompatActivity() {
             val client = ApiConfig.getApiServiceCamera().uploadimage(imageMultipart)
             client.enqueue(object : retrofit2.Callback<ApiResponse> {
                 override fun onResponse(call: Call<ApiResponse>, response: Response<ApiResponse>) {
-                    showLoading(false)
-                    val responseBody = response.body()
-                    if (response.isSuccessful && responseBody?.message == "Image created successfully") {
-                        Toast.makeText(this@CameraActivity,
-                            getString(R.string.upload_sukses),
-                            Toast.LENGTH_SHORT
-                        ).show()
-                        val intent = Intent(this@CameraActivity, ScanActivity::class.java)
+                    Toast.makeText(this@CameraActivity,getString(R.string.upload_sukses),
+                        Toast.LENGTH_SHORT).show()
+                    val intent = Intent(this@CameraActivity, ScanActivity::class.java)
                         startActivity(intent)
                         finish()
-                    } else {
-                        Toast.makeText(this@CameraActivity,
-                            getString(R.string.Upload_Gagal),
-                            Toast.LENGTH_SHORT
-                        ).show()
-                    }
                 }
 
                 override fun onFailure(call: Call<ApiResponse>, t: Throwable) {
@@ -158,6 +146,7 @@ class CameraActivity : AppCompatActivity() {
                     ).show()
                 }
             })
+
         }
     }
 

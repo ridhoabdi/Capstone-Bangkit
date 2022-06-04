@@ -5,8 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.DashboardUI.Camera.CameraActivity">
-
-
     <ImageView
         android:id="@+id/img_posts"
         android:layout_width="0dp"

@@ -61,5 +61,9 @@
     <string name="upload_sukses">sukses upload</string>
     <string name="Upload_Gagal">Gagal Upload</string>
 
+    <!--prediction-->
+    <string name="prediction">prediction</string>
+    <string name="presentase">presentase</string>
+
 
 </resources>

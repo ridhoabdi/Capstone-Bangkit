@@ -57,36 +57,4 @@ class MainActivity : AppCompatActivity() {
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
     }
-
-//    override fun onCreateOptionsMenu(menu: Menu): Boolean {
-//        menuInflater.inflate(R.menu.setting, menu)
-//        return super.onCreateOptionsMenu(menu)
-//    }
-
-//    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-//        when (item.itemId) {
-//            R.id.mode -> {
-//                val menuSetting = Intent(this, SettingThemeActivity::class.java)
-//                startActivity(menuSetting)
-//                return true
-//            }
-//            R.id.Logout -> {
-//                auth.signOut()
-//                val menuSetting = Intent(this, WelcomeUserActivity::class.java)
-//                startActivity(menuSetting)
-//                return true
-//            }
-//            else -> return true
-//        }
-//    }
-
-//    fun ChangeTheme() {
-//        themeViewModel.getThemeSetting().observe(this) { isDarkModeActive: Boolean ->
-//            if (isDarkModeActive) {
-//                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
-//            } else {
-//                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
-//            }
-//        }
-//    }
 }
