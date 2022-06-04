@@ -16,20 +16,16 @@ import androidx.core.content.ContextCompat
 import androidx.core.content.FileProvider
 import com.capstonebangkit.skin_diagnosis_app.R
 import com.capstonebangkit.skin_diagnosis_app.databinding.ActivityCameraBinding
-import com.capstonebangkit.skin_diagnosis_app.ui.DashboardAction.XCamera.CameraActionActivity
 import com.capstonebangkit.skin_diagnosis_app.ui.DashboardUI.Deteksi.ScanActivity
 import com.capstonebangkit.skin_diagnosis_app.ui.DataApi.ApiConfig
 import com.capstonebangkit.skin_diagnosis_app.ui.response.ApiResponse
 import com.capstonebangkit.skin_diagnosis_app.ui.utils.createTempFile
-import com.capstonebangkit.skin_diagnosis_app.ui.utils.rotateBitmap
-import com.google.android.gms.cast.framework.media.ImagePicker
 import okhttp3.*
 import okhttp3.MediaType.Companion.toMediaTypeOrNull
 import okhttp3.RequestBody.Companion.asRequestBody
 import retrofit2.Call
 import retrofit2.Response
 import java.io.File
-import java.io.IOException
 
 
 class CameraActivity : AppCompatActivity() {
@@ -166,8 +162,6 @@ class CameraActivity : AppCompatActivity() {
 
     private lateinit var currentPhotoPath: String
     private fun startCameraX() {
-//        val intent = Intent(this, CameraActionActivity::class.java)
-//        launcherIntentCameraX.launch(intent)
         val intent = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
         intent.resolveActivity(packageManager)
         createTempFile(application).also {
