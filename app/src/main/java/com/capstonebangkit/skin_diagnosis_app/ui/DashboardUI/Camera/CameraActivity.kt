@@ -1,12 +1,14 @@
 package com.capstonebangkit.skin_diagnosis_app.ui.DashboardUI.Camera
 
 import android.Manifest
+import android.content.ContentValues.TAG
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.graphics.BitmapFactory
 import android.net.Uri
 import android.os.Bundle
 import android.provider.MediaStore
+import android.util.Log
 import android.view.View
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
@@ -18,12 +20,14 @@ import com.capstonebangkit.skin_diagnosis_app.R
 import com.capstonebangkit.skin_diagnosis_app.databinding.ActivityCameraBinding
 import com.capstonebangkit.skin_diagnosis_app.ui.DashboardUI.Deteksi.ScanActivity
 import com.capstonebangkit.skin_diagnosis_app.ui.DataApi.ApiConfig
+import com.capstonebangkit.skin_diagnosis_app.ui.DataApi.res
 import com.capstonebangkit.skin_diagnosis_app.ui.response.ApiResponse
 import com.capstonebangkit.skin_diagnosis_app.ui.utils.createTempFile
 import com.capstonebangkit.skin_diagnosis_app.ui.utils.reduceFileImage
 import okhttp3.*
 import okhttp3.MediaType.Companion.toMediaTypeOrNull
 import okhttp3.RequestBody.Companion.asRequestBody
+import org.json.JSONObject
 import retrofit2.Call
 import retrofit2.Response
 import java.io.File
@@ -39,6 +43,7 @@ class CameraActivity : AppCompatActivity() {
 //        private const val REQUEST_CODE_PERMISSIONS = 10
         private val REQUIRED_PERMISSIONS = arrayOf(Manifest.permission.CAMERA)
         private const val REQUEST_CODE_PERMISSIONS = 10
+        private val TAG = CameraActivity::class.java.simpleName
     }
 //    override fun onRequestPermissionsResult(
 //        requestCode: Int,
@@ -129,16 +134,59 @@ class CameraActivity : AppCompatActivity() {
 //
 //            })
             val client = ApiConfig.getApiServiceCamera().uploadimage(imageMultipart)
-            client.enqueue(object : retrofit2.Callback<ApiResponse> {
-                override fun onResponse(call: Call<ApiResponse>, response: Response<ApiResponse>) {
+//            client.enqueue(object : retrofit2.Callback<ResponseBody> {
+//                override fun onResponse(
+//                    call: Call<ResponseBody>,
+//                    response: Response<ResponseBody>
+//                ) {
+//                    showLoading(false)
+//                    Toast.makeText(this@CameraActivity,getString(R.string.upload_sukses),
+//                        Toast.LENGTH_SHORT).show()
+//                    val intent = Intent(this@CameraActivity, ScanActivity::class.java)
+//                        startActivity(intent)
+//                        finish()
+//                }
+//
+//                override fun onFailure(call: Call<ResponseBody>, t: Throwable) {
+//                    showLoading(false)
+//                    Toast.makeText(this@CameraActivity,
+//                        getString(R.string.Upload_Gagal),
+//                        Toast.LENGTH_SHORT
+//                    ).show()
+//            }
+//            })
+            client.enqueue(object :retrofit2.Callback<res>{
+                override fun onResponse(
+                    call: Call<res>,
+                    response: Response<res>
+                ) {
+                    showLoading(false)
                     Toast.makeText(this@CameraActivity,getString(R.string.upload_sukses),
                         Toast.LENGTH_SHORT).show()
+                    val prediction = response.body()?.Prediksi
+                    val precentation = response.body()?.Presentase
+//                    Log.d(TAG.toString(), p!!.toString())
+//                    Log.d(TAG.toString(),result2.toString())
+
+//                    try {
+//                        val responseObject = JSONObject(result)
+//                        Log.d(TAG.toString(), responseObject.toString())
+//                        val quote = responseObject.getString("Prediksi")
+//                        val author = responseObject.getString("Presentase")
+//                        binding.predict.text = result
+//                        binding.precent.text = result2
                     val intent = Intent(this@CameraActivity, ScanActivity::class.java)
-                        startActivity(intent)
-                        finish()
+                    intent.putExtra("prediksi","$prediction")
+                    intent.putExtra("presentasi","$precentation")
+                    startActivity(intent)
+                    finish()
+//                    } catch (e: Exception) {
+//                        Toast.makeText(this@CameraActivity, e.message, Toast.LENGTH_SHORT).show()
+//                        e.printStackTrace()
+//                    }
                 }
 
-                override fun onFailure(call: Call<ApiResponse>, t: Throwable) {
+                override fun onFailure(call: Call<res>, t: Throwable) {
                     showLoading(false)
                     Toast.makeText(this@CameraActivity,
                         getString(R.string.Upload_Gagal),
@@ -146,9 +194,9 @@ class CameraActivity : AppCompatActivity() {
                     ).show()
                 }
             })
-
         }
     }
+
 
     private lateinit var currentPhotoPath: String
     private fun startCameraX() {
@@ -197,3 +245,5 @@ class CameraActivity : AppCompatActivity() {
         binding.progressBar.visibility = if (isLoading) View.VISIBLE else View.GONE
     }
 }
+
+

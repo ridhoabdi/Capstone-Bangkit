@@ -38,7 +38,7 @@ def rock_paper_scissor():
         with open('data.json', 'w') as f:
             json.dump(data, f, indent=4)
 
-    # return()
+    return()
 
     # For GET requests, load the index file
     # return render_template('index.html')
