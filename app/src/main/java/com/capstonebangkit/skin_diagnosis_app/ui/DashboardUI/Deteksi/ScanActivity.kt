@@ -18,8 +18,6 @@ class ScanActivity : AppCompatActivity() {
         const val EXTRA_pred = "prediksi"
         const val EXTRA_prec = "presentasi"
     }
-
-    private lateinit var binding: ActivityScanBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_scan)
