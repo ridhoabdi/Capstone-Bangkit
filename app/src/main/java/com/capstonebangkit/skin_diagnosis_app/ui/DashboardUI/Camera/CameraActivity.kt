@@ -38,45 +38,15 @@ class CameraActivity : AppCompatActivity() {
     private var getFile: File? = null
 
     companion object {
-//        const val CAMERA_X_RESULT = 200
-//        private val REQUIRED_PERMISSIONS = arrayOf(Manifest.permission.CAMERA)
-//        private const val REQUEST_CODE_PERMISSIONS = 10
         private val REQUIRED_PERMISSIONS = arrayOf(Manifest.permission.CAMERA)
         private const val REQUEST_CODE_PERMISSIONS = 10
         private val TAG = CameraActivity::class.java.simpleName
     }
-//    override fun onRequestPermissionsResult(
-//        requestCode: Int,
-//        permissions: Array<String>,
-//        grantResults: IntArray
-//    ) {
-//        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
-//        if (requestCode == REQUEST_CODE_PERMISSIONS) {
-//            if (!allPermissionsGranted()) {
-//                Toast.makeText(
-//                    this,
-//                    "Tidak mendapatkan permission.",
-//                    Toast.LENGTH_SHORT
-//                ).show()
-//                finish()
-//            }
-//        }
-//    }
-//
-//    private fun allPermissionsGranted() = REQUIRED_PERMISSIONS.all {
-//        ContextCompat.checkSelfPermission(baseContext, it) == PackageManager.PERMISSION_GRANTED
-//    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityCameraBinding.inflate(layoutInflater)
         setContentView(binding.root)
-//        if (!allPermissionsGranted()) {
-//            ActivityCompat.requestPermissions(
-//                this,
-//                REQUIRED_PERMISSIONS,
-//                REQUEST_CODE_PERMISSIONS
-//            )
-//        }
         if (!allPermissionsGranted()) {
             ActivityCompat.requestPermissions(
                 this,
@@ -105,56 +75,7 @@ class CameraActivity : AppCompatActivity() {
                 file.name,
                 requestImageFile
             )
-//            val data = requestImageFile
-//            val client = OkHttpClient()
-//            val request = Request.Builder().url("http://192.168.0.117:5000/")
-//                .post(data)
-//                .build();
-//            client.newCall(request).enqueue(object :Callback {
-//                override fun onFailure(call: okhttp3.Call, e: IOException) {
-//                    e.printStackTrace()
-//                }
-//
-//                override fun onResponse(call: okhttp3.Call, response: okhttp3.Response) {
-//                    if (response.isSuccessful) {
-//                        Toast.makeText(this@CameraActivity,
-//                            getString(R.string.upload_sukses),
-//                            Toast.LENGTH_SHORT
-//                        ).show()
-//                        val intent = Intent(this@CameraActivity, ScanActivity::class.java)
-//                        startActivity(intent)
-//                        finish()
-//                    } else {
-//                        Toast.makeText(this@CameraActivity,
-//                            getString(R.string.Upload_Gagal),
-//                            Toast.LENGTH_SHORT
-//                        ).show()
-//                    }
-//                }
-//
-//            })
             val client = ApiConfig.getApiServiceCamera().uploadimage(imageMultipart)
-//            client.enqueue(object : retrofit2.Callback<ResponseBody> {
-//                override fun onResponse(
-//                    call: Call<ResponseBody>,
-//                    response: Response<ResponseBody>
-//                ) {
-//                    showLoading(false)
-//                    Toast.makeText(this@CameraActivity,getString(R.string.upload_sukses),
-//                        Toast.LENGTH_SHORT).show()
-//                    val intent = Intent(this@CameraActivity, ScanActivity::class.java)
-//                        startActivity(intent)
-//                        finish()
-//                }
-//
-//                override fun onFailure(call: Call<ResponseBody>, t: Throwable) {
-//                    showLoading(false)
-//                    Toast.makeText(this@CameraActivity,
-//                        getString(R.string.Upload_Gagal),
-//                        Toast.LENGTH_SHORT
-//                    ).show()
-//            }
-//            })
             client.enqueue(object :retrofit2.Callback<res>{
                 override fun onResponse(
                     call: Call<res>,
@@ -165,25 +86,11 @@ class CameraActivity : AppCompatActivity() {
                         Toast.LENGTH_SHORT).show()
                     val prediction = response.body()?.Prediksi
                     val precentation = response.body()?.Presentase
-//                    Log.d(TAG.toString(), p!!.toString())
-//                    Log.d(TAG.toString(),result2.toString())
-
-//                    try {
-//                        val responseObject = JSONObject(result)
-//                        Log.d(TAG.toString(), responseObject.toString())
-//                        val quote = responseObject.getString("Prediksi")
-//                        val author = responseObject.getString("Presentase")
-//                        binding.predict.text = result
-//                        binding.precent.text = result2
                     val intent = Intent(this@CameraActivity, ScanActivity::class.java)
                     intent.putExtra("prediksi","$prediction")
                     intent.putExtra("presentasi","$precentation")
                     startActivity(intent)
                     finish()
-//                    } catch (e: Exception) {
-//                        Toast.makeText(this@CameraActivity, e.message, Toast.LENGTH_SHORT).show()
-//                        e.printStackTrace()
-//                    }
                 }
 
                 override fun onFailure(call: Call<res>, t: Throwable) {
@@ -217,17 +124,6 @@ class CameraActivity : AppCompatActivity() {
     private val launcherIntentCameraX = registerForActivityResult(
         ActivityResultContracts.StartActivityForResult()
     ) {
-//        if (it.resultCode == CAMERA_X_RESULT) {
-//            val myFile = it.data?.getSerializableExtra("picture") as File
-//            val isBackCamera = it.data?.getBooleanExtra("isBackCamera", true) as Boolean
-//
-//            val result = rotateBitmap(
-//                BitmapFactory.decodeFile(myFile.path),
-//                isBackCamera
-//            )
-//
-//            binding.previewImageView.setImageBitmap(result)
-//        }
         if (it.resultCode == RESULT_OK) {
             val myFile = File(currentPhotoPath)
             val result = BitmapFactory.decodeFile(myFile.path)
@@ -236,10 +132,6 @@ class CameraActivity : AppCompatActivity() {
             binding.imgPosts.setImageBitmap(result)
         }
     }
-
-    // this is camera
-
-
     //show loading
     private fun showLoading(isLoading: Boolean) {
         binding.progressBar.visibility = if (isLoading) View.VISIBLE else View.GONE
