@@ -17,6 +17,7 @@
         android:theme="@style/Theme.Skin_Diagnosis_App">
         <activity
             android:name=".ui.DashboardUI.Deteksi.ScanActivity"
+            android:label="@string/prediction"
             android:exported="false" />
         <activity
             android:name=".ui.ui.message.MassageActivity"

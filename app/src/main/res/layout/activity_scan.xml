@@ -41,11 +41,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
-        android:layout_marginTop="44dp"
         android:textAlignment="center"
         android:textSize="14sp"
         android:textStyle="italic"
-        app:layout_constraintTop_toBottomOf="@+id/labelDeskripsi"
+        app:layout_constraintTop_toBottomOf="@+id/predict"
         tools:layout_editor_absoluteX="16dp"
         tools:text="@string/presentase" />
 
