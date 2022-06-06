@@ -21,7 +21,6 @@ import com.capstonebangkit.skin_diagnosis_app.databinding.ActivityCameraBinding
 import com.capstonebangkit.skin_diagnosis_app.ui.DashboardUI.Deteksi.ScanActivity
 import com.capstonebangkit.skin_diagnosis_app.ui.DataApi.ApiConfig
 import com.capstonebangkit.skin_diagnosis_app.ui.DataApi.res
-import com.capstonebangkit.skin_diagnosis_app.ui.response.ApiResponse
 import com.capstonebangkit.skin_diagnosis_app.ui.utils.createTempFile
 import com.capstonebangkit.skin_diagnosis_app.ui.utils.reduceFileImage
 import okhttp3.*
@@ -89,6 +88,8 @@ class CameraActivity : AppCompatActivity() {
                     val intent = Intent(this@CameraActivity, ScanActivity::class.java)
                     intent.putExtra("prediksi","$prediction")
                     intent.putExtra("presentasi","$precentation")
+                    intent.putExtra("picture", getFile!!.path.toString())
+//                    intent.putExtra("Obat", "$Obat")
                     startActivity(intent)
                     finish()
                 }

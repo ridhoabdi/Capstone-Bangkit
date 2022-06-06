@@ -25,7 +25,7 @@ def get_category(img):
     # Expand img dimensions from (224, 224, 3) to (1, 224, 224, 3) for set_tensor method call
     img = np.expand_dims(img, axis=0)
 
-    tflite_model_file = 'D:/androidbangkit2022/capstone/Capstone-Bangkit/Flask-Dir/2skin_model.tflite'
+    tflite_model_file = 'D:/android bangkit2022/capstone/Flask-Dir/2skin_model.tflite'
 
     with open(tflite_model_file, 'rb') as fid:
         tflite_model = fid.read()

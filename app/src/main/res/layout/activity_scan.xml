@@ -7,21 +7,6 @@
     tools:context=".ui.DashboardUI.Deteksi.ScanActivity">
 
     <TextView
-        android:id="@+id/labelDeskripsi"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:textAlignment="center"
-        android:text="PREDICTION"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.11"/>
-
-    <TextView
         android:id="@+id/predict"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -31,9 +16,10 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.209"
+        app:layout_constraintVertical_bias="0.072"
         tools:text="@string/prediction" />
 
     <TextView
@@ -41,12 +27,35 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
+        android:layout_marginTop="216dp"
         android:textAlignment="center"
         android:textSize="14sp"
         android:textStyle="italic"
         app:layout_constraintTop_toBottomOf="@+id/predict"
-        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteX="0dp"
         tools:text="@string/presentase" />
+
+    <ImageView
+        android:id="@+id/imageObat"
+        android:layout_width="225dp"
+        android:layout_height="324dp"
+        android:layout_marginTop="28dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.548"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/precent"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="200dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="44dp"
+        android:text="@string/obat"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageObat" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
