@@ -1,5 +1,7 @@
 package com.capstonebangkit.skin_diagnosis_app.ui.ui.saran
 
+import android.annotation.SuppressLint
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,11 +9,18 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatDelegate
+import androidx.datastore.core.DataStore
+import androidx.datastore.preferences.core.Preferences
+import androidx.datastore.preferences.preferencesDataStore
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.capstonebangkit.skin_diagnosis_app.R
 import com.capstonebangkit.skin_diagnosis_app.databinding.FragmentSaranBinding
+import com.capstonebangkit.skin_diagnosis_app.ui.ui.profile.ProfileViewModel
+import com.capstonebangkit.skin_diagnosis_app.ui.ui.profile.SettingPreferences
+import com.capstonebangkit.skin_diagnosis_app.ui.ui.profile.ViewModelFactory
 import com.capstonebangkit.skin_diagnosis_app.ui.ui.welcome.WelcomeUserActivity
 import com.firebase.ui.database.FirebaseRecyclerOptions
 import com.google.firebase.auth.FirebaseAuth
@@ -27,6 +36,7 @@ class SaranFragment : Fragment() {
     private lateinit var auth: FirebaseAuth
     private lateinit var db: FirebaseDatabase
     private lateinit var adapter: FirebaseMessageAdapter
+//    private val Context.dataStore: DataStore<Preferences> by preferencesDataStore(name = "settings")
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -42,6 +52,7 @@ class SaranFragment : Fragment() {
         return root
     }
 
+//    @SuppressLint("FragmentLiveDataObserve")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         auth = Firebase.auth
@@ -80,6 +91,21 @@ class SaranFragment : Fragment() {
             .build()
         adapter = FirebaseMessageAdapter(options, firebaseUser.displayName)
         binding.messageRecyclerView.adapter = adapter
+
+//        val pref = SettingPreferences.getInstance(requireContext().dataStore)
+//        val settingsViewModel = ViewModelProvider(this, ViewModelFactory(pref)).get(
+//            ProfileViewModel::class.java
+//        )
+//
+//        settingsViewModel.getThemeSettings().observe(this
+//        ) { isDarkModeActive: Boolean ->
+//            if (isDarkModeActive) {
+//                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
+//            } else {
+//                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+//            }
+//        }
+
 
     }
     public override fun onResume() {

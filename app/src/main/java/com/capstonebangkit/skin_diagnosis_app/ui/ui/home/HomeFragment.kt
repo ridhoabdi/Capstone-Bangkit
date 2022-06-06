@@ -1,11 +1,18 @@
 package com.capstonebangkit.skin_diagnosis_app.ui.ui.home
 
+import android.annotation.SuppressLint
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.CompoundButton
+import androidx.appcompat.app.AppCompatDelegate
 import androidx.cardview.widget.CardView
+import androidx.datastore.core.DataStore
+import androidx.datastore.preferences.core.Preferences
+import androidx.datastore.preferences.preferencesDataStore
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.capstonebangkit.skin_diagnosis_app.R
@@ -14,7 +21,11 @@ import com.capstonebangkit.skin_diagnosis_app.ui.DashboardUI.Camera.CameraActivi
 import com.capstonebangkit.skin_diagnosis_app.ui.DashboardUI.Description.DescriptionActivity
 import com.capstonebangkit.skin_diagnosis_app.ui.DashboardUI.Panduan.PanduanActivity
 import com.capstonebangkit.skin_diagnosis_app.ui.DashboardUI.Upload.UploadActivity
+import com.capstonebangkit.skin_diagnosis_app.ui.ui.profile.ProfileViewModel
+import com.capstonebangkit.skin_diagnosis_app.ui.ui.profile.SettingPreferences
+import com.capstonebangkit.skin_diagnosis_app.ui.ui.profile.ViewModelFactory
 
+//private val Context.dataStore: DataStore<Preferences> by preferencesDataStore(name = "settings")
 
 class HomeFragment : Fragment() , View.OnClickListener{
 
@@ -42,6 +53,7 @@ class HomeFragment : Fragment() , View.OnClickListener{
         return root
     }
 
+//    @SuppressLint("FragmentLiveDataObserve")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         //deskripsikan variabel
@@ -55,6 +67,21 @@ class HomeFragment : Fragment() , View.OnClickListener{
         cardUploadAction.setOnClickListener(this)
         cardPanduanAction.setOnClickListener(this)
         cardDescriptionAction.setOnClickListener(this)
+
+//        val pref = SettingPreferences.getInstance(requireContext().dataStore)
+//        val settingsViewModel = ViewModelProvider(this, ViewModelFactory(pref)).get(
+//            ProfileViewModel::class.java
+//        )
+//
+//        settingsViewModel.getThemeSettings().observe(this
+//        ) { isDarkModeActive: Boolean ->
+//            if (isDarkModeActive) {
+//                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
+//            } else {
+//                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+//            }
+//        }
+
     }
     override fun onClick(v: View) {
         if (v.id == R.id.cameraClick) {

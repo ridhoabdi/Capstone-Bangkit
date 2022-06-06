@@ -11,7 +11,6 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="76dp"
-        android:background="@color/firebase_gray"
         android:orientation="horizontal"
         android:paddingHorizontal="10dp">
 
@@ -25,8 +24,7 @@
             android:layout_marginEnd="10dp"
             android:layout_marginBottom="10dp"
             android:layout_weight="1"
-            android:background="@drawable/edit_text_shadow"
-            android:hint="Say something..."
+            android:hint="@string/type_something"
             android:inputType="text"
             android:minHeight="48dp"
             android:padding="10dp" />
@@ -41,13 +39,13 @@
 
     </LinearLayout>
 
-    <ProgressBar
-        android:id="@+id/progressBar"
-        style="?android:attr/progressBarStyleLarge"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true" />
+<!--    <ProgressBar-->
+<!--        android:id="@+id/progressBar"-->
+<!--        style="?android:attr/progressBarStyleLarge"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:layout_centerVertical="true" />-->
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/messageRecyclerView"
@@ -55,6 +53,5 @@
         android:layout_height="586dp"
         android:layout_above="@+id/linearLayout"
         android:layout_marginTop="0dp"
-        android:layout_marginBottom="1dp"
-        android:background="@android:color/white" />
+        android:layout_marginBottom="1dp" />
 </RelativeLayout>

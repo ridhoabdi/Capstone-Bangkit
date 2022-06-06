@@ -1,4 +1,4 @@
-package com.capstonebangkit.skin_diagnosis_app.ui.datastore
+package com.capstonebangkit.skin_diagnosis_app.ui.ui.profile
 
 import androidx.datastore.core.DataStore
 import androidx.datastore.preferences.core.Preferences
@@ -8,7 +8,6 @@ import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
 
 class SettingPreferences private constructor(private val dataStore: DataStore<Preferences>) {
-
     private val THEME_KEY = booleanPreferencesKey("theme_setting")
 
     fun getThemeSetting(): Flow<Boolean> {
@@ -18,11 +17,10 @@ class SettingPreferences private constructor(private val dataStore: DataStore<Pr
     }
 
     suspend fun saveThemeSetting(isDarkModeActive: Boolean) {
-        dataStore.edit { prefences ->
-            prefences[THEME_KEY] = isDarkModeActive
+        dataStore.edit { preferences ->
+            preferences[THEME_KEY] = isDarkModeActive
         }
     }
-
     companion object {
         @Volatile
         private var INSTANCE: SettingPreferences? = null

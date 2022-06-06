@@ -3,7 +3,7 @@
     <string name="title_activity_main_home">MainActivityHome</string>
     <string name="title_home">Home</string>
     <string name="title_saran">Saran</string>
-    <string name="title_profile">profile</string>
+    <string name="title_profile">Profil</string>
     <string name="camera_x">CameraX</string>
     <string name="gallery">Galeri</string>
 
@@ -15,11 +15,11 @@
     <string name="deskripsi">Deskripsi</string>
 
     <!--home-->
-    <string name="Desc_camera">camera</string>
+    <string name="Desc_camera">Camera</string>
     <string name="Desc_upload">Upload Gambar</string>
     <string name="Desc_panduan">Panduan</string>
     <string name="Desc_deskripsi">Deskripsi</string>
-    <string name="Desc_profile">Profile</string>
+    <string name="Desc_profile">Profil</string>
 
     <!--camera-->
     <string name="Title_camera">Camera</string>
@@ -48,6 +48,8 @@
     <string name="language">Bahasa</string>
     <string name="about_us">Tentang kami</string>
 
+    <!-- saran -->
+    <string name="type_something">Ketikkan sesuatu...</string>
     <string name="send_success">Berhasil terkirim</string>
     <string name="send_error">Gagal terkirim</string>
 
@@ -64,6 +66,7 @@
     <!--prediction-->
     <string name="prediction">prediction</string>
     <string name="presentase">presentase</string>
+
 
 
 </resources>
