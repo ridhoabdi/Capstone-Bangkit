@@ -18,6 +18,5 @@ interface ApiServiceInterface {
 
 data class res (
     val Prediksi: String?,
-    val Presentase: String?,
-    val Obat: String?
-        )
+    val Presentase: String?
+)

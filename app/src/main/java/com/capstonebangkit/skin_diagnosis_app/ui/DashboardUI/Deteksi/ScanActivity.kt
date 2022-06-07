@@ -29,14 +29,11 @@ class ScanActivity : AppCompatActivity() {
         val tvPredict: TextView = findViewById(R.id.predict)
         val tvPrecent: TextView = findViewById(R.id.precent)
         val imgObat : ImageView = findViewById(R.id.imageObat)
-//        getData()
+
         val hasilprediksi = intent.getStringExtra(EXTRA_pred)
         val hasilpresentase = intent.getStringExtra(EXTRA_prec)
         val hasilGambar = intent.getStringExtra(EXTRA_pict)
         val result = BitmapFactory.decodeFile(hasilGambar)
-//        val bundle: Bundle = intent.extras!!
-//        val resId: Int = bundle.getInt("picture")
-
         val text = "$hasilprediksi"
         val text2 = "$hasilpresentase"
 

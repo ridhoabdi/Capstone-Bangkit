@@ -6,4 +6,44 @@
     android:layout_height="match_parent"
     tools:context=".ui.DashboardUI.Upload.UploadActivity">
 
+    <ImageView
+        android:id="@+id/image_Tampil"
+        android:layout_width="237dp"
+        android:layout_height="383dp"
+        android:layout_marginTop="52dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <Button
+        android:id="@+id/btn_Galeri"
+        android:layout_width="185dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="16dp"
+        android:text="Galeri"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/image_Tampil" />
+
+    <Button
+        android:id="@+id/btn_result"
+        android:layout_width="246dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="104dp"
+        android:text="Result"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.472"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/image_Tampil" />
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
