@@ -4,6 +4,7 @@ import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
+import android.provider.Settings
 import android.view.*
 import android.widget.CompoundButton
 import android.widget.ImageView
@@ -80,6 +81,9 @@ class ProfileFragment : Fragment() {
             settingsViewModel.saveThemeSetting(isChecked)
         }
 
+        // language
+        multipleLanguage()
+
         // logout
         binding.logOut.setOnClickListener {
             logoutButton()
@@ -94,6 +98,13 @@ class ProfileFragment : Fragment() {
         startActivity(i)
         activity?.finish()
     }
+
+    private fun multipleLanguage() {
+        binding.switchLanguage.setOnClickListener {
+            startActivity(Intent(Settings.ACTION_LOCALE_SETTINGS))
+        }
+    }
+
 
 }
 
