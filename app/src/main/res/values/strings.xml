@@ -68,7 +68,13 @@
     <string name="camera_step_3">Pada Dashboard Beranda, klik ikon Kamera untuk melakukan memproses scan deteksi dari hasil kamera</string>
     <string name="camera_step_4">Klik tombol Kamera, kemudian izinkan akses kamera dari device Anda</string>
     <string name="camera_step_5">Arahkan kamera Anda pada kulit yang ingin dideteksi dan ambil gambar</string>
-    <string name="camera_step_6">Terakhir, klik tombol Hasil, maka sistem secara otomatis akan menampilkan hasil deteksi dari gambar yang anda ambil dari kamera</string>
+    <string name="camera_step_6">Terakhir, klik tombol Hasil, maka sistem secara otomatis akan menampilkan hasil deteksi dari gambar yang Anda ambil dari kamera</string>
+    <string name="upload_step_1">Daftarkan akun anda terlebih dahulu dengan mengisi Nama, Email, Password pada form yang telah disediakan</string>
+    <string name="upload_step_2">Jika sudah mendaftar, masukkan Email dan Password untuk masuk ke Aplikasi</string>
+    <string name="upload_step_3">Pada Dashboard Beranda, klik ikon Unggah untuk melakukan memproses scan deteksi dari hasil unggah gambar</string>
+    <string name="upload_step_4">Izinkan akses mengambil file gambar dari device Anda</string>
+    <string name="upload_step_5">Kemudian, pilih gambar yang ingin dideteksi</string>
+    <string name="upload_step_6">Terakhir, klik tombol Hasil, maka sistem secara otomatis akan menampilkan hasil deteksi dari gambar yang Anda ambil dari galeri</string>
 
     <!--prediction-->
     <string name="prediction">prediction</string>

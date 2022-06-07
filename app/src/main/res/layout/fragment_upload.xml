@@ -1,15 +1,201 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.DashboardUI.Panduan.UploadFragment">
+    android:orientation="vertical"
+    tools:context=".ui.DashboardUI.Panduan.CameraFragment">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:text="@string/content_tab_upload" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-</FrameLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/textview_title_step_upload"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="32dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/content_tab_upload"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/textview_step_one"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="20dp">
+
+                <ImageView
+                    android:id="@+id/icon_step_one"
+                    android:layout_width="14dp"
+                    android:layout_height="14dp"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/rounded_bg_biru_medium" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="14dp"
+                    android:layout_toEndOf="@+id/icon_step_one"
+                    android:text="@string/upload_step_1"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/textview_step_two"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="20dp">
+
+                <ImageView
+                    android:id="@+id/icon_step_two"
+                    android:layout_width="14dp"
+                    android:layout_height="14dp"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/rounded_bg_biru_medium" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="14dp"
+                    android:layout_toEndOf="@+id/icon_step_two"
+                    android:text="@string/upload_step_2"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/textview_step_three"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="20dp">
+
+                <ImageView
+                    android:id="@+id/icon_step_three"
+                    android:layout_width="14dp"
+                    android:layout_height="14dp"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/rounded_bg_biru_medium" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="14dp"
+                    android:layout_toEndOf="@+id/icon_step_three"
+                    android:text="@string/upload_step_3"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/textview_step_four"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="20dp">
+
+                <ImageView
+                    android:id="@+id/icon_step_four"
+                    android:layout_width="14dp"
+                    android:layout_height="14dp"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/rounded_bg_biru_medium" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="14dp"
+                    android:layout_toEndOf="@+id/icon_step_four"
+                    android:text="@string/upload_step_4"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/textview_step_five"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="20dp">
+
+                <ImageView
+                    android:id="@+id/icon_step_five"
+                    android:layout_width="14dp"
+                    android:layout_height="14dp"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/rounded_bg_biru_medium" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="14dp"
+                    android:layout_toEndOf="@+id/icon_step_five"
+                    android:text="@string/upload_step_5"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/textview_step_six"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="20dp">
+
+                <ImageView
+                    android:id="@+id/icon_step_six"
+                    android:layout_width="14dp"
+                    android:layout_height="14dp"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/rounded_bg_biru_medium" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="14dp"
+                    android:layout_toEndOf="@+id/icon_step_six"
+                    android:text="@string/upload_step_6"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
