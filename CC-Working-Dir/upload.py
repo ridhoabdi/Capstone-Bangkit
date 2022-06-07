@@ -10,7 +10,7 @@ def get_category(img):
         [str]: Prediction
         [str]: Presentase
     """
-    tflite_model_file = 'N:/A PROJECT S1/Semester 6/1. BANGKIT/Capstone ML/Skin-Diagnose2/2skin_model.tflite'
+    tflite_model_file = '2skin_model.tflite'
     with open(tflite_model_file, 'rb') as fid:
         tflite_model = fid.read()
     interpreter = tf.lite.Interpreter(model_content=tflite_model)
@@ -22,11 +22,12 @@ def get_category(img):
     # Read an image from a file into a numpy array
     img = mpimg.imread(img)
     # Convert to float32
-    img = tf.cast(img, tf.float32)
+    img = tf.cast(img, tf.float32) / 255
     # Resize to 224x224 (size the model is expecting)
     img = tf.image.resize(img, [224, 224])
     # Expand img dimensions from (224, 224, 3) to (1, 224, 224, 3) for set_tensor method call
-    images = np.expand_dims(img, axis=0)
+    img = np.expand_dims(img, axis=0)
+    images = np.vstack([img])
 
 
     interpreter.set_tensor(input_details[0]['index'], images)
