@@ -47,7 +47,7 @@
         tools:srcCompat="@tools:sample/avatars" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/safePredict"
         android:layout_width="200dp"
         android:layout_height="55dp"
         android:layout_marginTop="44dp"

@@ -4,6 +4,7 @@
     <!-- internet -->
     <uses-permission android:name="android.permission.INTERNET" /> <!-- camera -->
     <uses-feature android:name="android.hardware.camera" />
+
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission
@@ -16,12 +17,20 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:usesCleartextTraffic="true"
-        android:theme="@style/Theme.Skin_Diagnosis_App">
+        android:theme="@style/Theme.Skin_Diagnosis_App"
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name=".ui.DashboardUI.safeDeteksi.ChickenpoxActivity"
+            android:label="Chickenpox"
+            android:exported="false" />
+        <activity
+            android:name=".ui.DashboardUI.safeDeteksi.ScabiesActivity"
+            android:label="Scabies"
+            android:exported="false" />
         <activity
             android:name=".ui.DashboardUI.Deteksi.ScanActivity"
-            android:label="@string/prediction"
-            android:exported="false" />
+            android:exported="false"
+            android:label="@string/prediction" />
         <activity
             android:name=".ui.ui.message.MassageActivity"
             android:exported="false" />
@@ -68,6 +77,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <provider
             android:name="androidx.core.content.FileProvider"
             android:authorities="com.capstonebangkin.skin_diagnosis_app.ui"
