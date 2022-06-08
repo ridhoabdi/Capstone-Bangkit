@@ -18,7 +18,7 @@
     <string name="Desc_camera">Kamera</string>
     <string name="Desc_upload">Upload Gambar</string>
     <string name="Desc_panduan">Panduan</string>
-    <string name="Desc_deskripsi">Deskripsi</string>
+    <string name="Desc_deskripsi">Artikel</string>
     <string name="Desc_profile">Profil</string>
 
     <!--camera-->
@@ -80,6 +80,7 @@
     <string name="prediction">prediction</string>
     <string name="presentase">presentase</string>
     <string name="obat">penanganan dan obat</string>
+
 
 
 </resources>
