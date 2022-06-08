@@ -45,7 +45,7 @@ class ScanActivity : AppCompatActivity() {
 
 
         tvPredict.text = text
-        tvPrecent.text = text2
+        tvPrecent.text = "$text2%"
         imgObat.setImageBitmap(result)
 
         btn.setOnClickListener {
