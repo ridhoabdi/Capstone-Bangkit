@@ -23,16 +23,19 @@ import com.google.android.material.switchmaterial.SwitchMaterial
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
-
 private val Context.dataStore: DataStore<Preferences> by preferencesDataStore(name = "settings")
+
 class ProfileFragment : Fragment() {
     private lateinit var auth: FirebaseAuth
     private var _binding: FragmentProfileBinding? = null
     private val binding get() = _binding!!
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View {
         // Inflate the layout for this fragment
-        inflater.inflate(R.layout.fragment_profile, container, false)
         _binding = FragmentProfileBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
@@ -43,7 +46,7 @@ class ProfileFragment : Fragment() {
         val firebaseUser = auth.currentUser
 
         if (firebaseUser != null) {
-            imageViewProfile.setImageURI(firebaseUser!!.photoUrl)
+            imageViewProfile.setImageURI(firebaseUser.photoUrl)
             textViewProfile.setText(firebaseUser.email.toString()).toString()
         }
 
@@ -61,13 +64,11 @@ class ProfileFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         val switchTheme = view.findViewById<SwitchMaterial>(R.id.switch_theme)
-        val pref = SettingPreferences.getInstance(requireContext().dataStore)
-        val settingsViewModel = ViewModelProvider(this, ViewModelFactory(pref)).get(
-            ProfileViewModel::class.java
-        )
+        val pref = ProfilePreferences.getInstance(requireContext().dataStore)
+        val profileViewModel = ViewModelProvider(this, ViewModelFactory(pref))[ProfileViewModel::class.java]
 
-        settingsViewModel.getThemeSettings().observe(this
-        ) { isDarkModeActive: Boolean ->
+        profileViewModel.getThemeSettings().observe(this,
+        { isDarkModeActive: Boolean ->
             if (isDarkModeActive) {
                 AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
                 switchTheme.isChecked = true
@@ -75,10 +76,10 @@ class ProfileFragment : Fragment() {
                 AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
                 switchTheme.isChecked = false
             }
-        }
+        })
 
         switchTheme.setOnCheckedChangeListener { _: CompoundButton?, isChecked: Boolean ->
-            settingsViewModel.saveThemeSetting(isChecked)
+            profileViewModel.saveThemeSetting(isChecked)
         }
 
         // language

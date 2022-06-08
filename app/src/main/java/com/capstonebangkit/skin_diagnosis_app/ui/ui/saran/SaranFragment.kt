@@ -1,26 +1,15 @@
 package com.capstonebangkit.skin_diagnosis_app.ui.ui.saran
 
-import android.annotation.SuppressLint
-import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import android.widget.Toast
-import androidx.appcompat.app.AppCompatDelegate
-import androidx.datastore.core.DataStore
-import androidx.datastore.preferences.core.Preferences
-import androidx.datastore.preferences.preferencesDataStore
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.capstonebangkit.skin_diagnosis_app.R
 import com.capstonebangkit.skin_diagnosis_app.databinding.FragmentSaranBinding
-import com.capstonebangkit.skin_diagnosis_app.ui.ui.profile.ProfileViewModel
-import com.capstonebangkit.skin_diagnosis_app.ui.ui.profile.SettingPreferences
-import com.capstonebangkit.skin_diagnosis_app.ui.ui.profile.ViewModelFactory
 import com.capstonebangkit.skin_diagnosis_app.ui.ui.welcome.WelcomeUserActivity
 import com.firebase.ui.database.FirebaseRecyclerOptions
 import com.google.firebase.auth.FirebaseAuth

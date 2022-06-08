@@ -26,7 +26,7 @@ import com.google.firebase.ktx.Firebase
 
 //private val Context.dataStore: DataStore<Preferences> by preferencesDataStore(name = "settings")
 class MainActivity : AppCompatActivity() {
-    private lateinit var auth : FirebaseAuth
+    private lateinit var auth: FirebaseAuth
     private lateinit var binding: ActivityMainBinding
 //    private lateinit var themeViewModel: ThemeViewModel
 

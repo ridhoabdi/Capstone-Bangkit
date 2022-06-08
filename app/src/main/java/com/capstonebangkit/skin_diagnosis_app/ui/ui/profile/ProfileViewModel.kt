@@ -3,7 +3,7 @@ package com.capstonebangkit.skin_diagnosis_app.ui.ui.profile
 import androidx.lifecycle.*
 import kotlinx.coroutines.launch
 
-class ProfileViewModel (private val pref: SettingPreferences) : ViewModel(){
+class ProfileViewModel (private val pref: ProfilePreferences) : ViewModel(){
     private val _text = MutableLiveData<String>().apply {
         value = "This is profile Fragment"
     }
