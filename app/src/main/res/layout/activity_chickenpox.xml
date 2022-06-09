@@ -6,15 +6,19 @@
     android:layout_height="match_parent"
     tools:context=".ui.DashboardUI.safeDeteksi.ScabiesActivity">
 
-    <!-- A TextView to show the data from the text file-->
-    <TextView
-        android:textSize="18dp"
-        android:textStyle="bold"
-        android:layout_marginTop="20dp"
-        android:id="@+id/textMedical"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_centerInParent="true"
-        android:gravity="left"/>
+        android:layout_height="wrap_content">
+        <!-- A TextView to show the data from the text file-->
+        <TextView
+            android:layout_marginTop="20dp"
+            android:id="@+id/textMedical"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:gravity="left"/>
+    </ScrollView>
 
 </RelativeLayout>
