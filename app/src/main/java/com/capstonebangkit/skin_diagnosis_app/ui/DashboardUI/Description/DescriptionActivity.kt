@@ -1,22 +1,15 @@
 package com.capstonebangkit.skin_diagnosis_app.ui.DashboardUI.Description
 
-import androidx.appcompat.app.AppCompatActivity
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
-import android.util.Log
-import android.view.View
 import android.widget.AdapterView
 import android.widget.ListView
-import android.widget.Toast
-import androidx.recyclerview.widget.DividerItemDecoration
-import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.appcompat.app.AppCompatActivity
 import com.capstonebangkit.skin_diagnosis_app.R
 import com.capstonebangkit.skin_diagnosis_app.databinding.ActivityDescriptionBinding
 import com.capstonebangkit.skin_diagnosis_app.ui.DataApiNews.Article
 import com.capstonebangkit.skin_diagnosis_app.ui.adapter.ArticleAdapter
-import com.loopj.android.http.AsyncHttpClient
-import com.loopj.android.http.AsyncHttpResponseHandler
-import cz.msebera.android.httpclient.Header
-import org.json.JSONArray
 import org.json.JSONObject
 import java.io.InputStream
 
@@ -24,8 +17,6 @@ class DescriptionActivity : AppCompatActivity() {
     private lateinit var listView: ListView
     private lateinit var adapter: ArticleAdapter
     private lateinit var articless: ArrayList<Article>
-
-    private lateinit var binding: ActivityDescriptionBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_description)
@@ -38,8 +29,8 @@ class DescriptionActivity : AppCompatActivity() {
         adapter.articles = articless
 
         listView.onItemClickListener = AdapterView.OnItemClickListener { _, _, i, _ ->
-            val toast = Toast.makeText(this, articless[i].author, Toast.LENGTH_SHORT)
-            toast.show()
+            val intent = Intent(Intent.ACTION_VIEW, Uri.parse(articless[i].url))
+            startActivity(intent)
         }
     }
 
