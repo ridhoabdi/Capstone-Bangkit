@@ -45,7 +45,6 @@
         android:layout_height="605dp"
         android:layout_above="@+id/linearLayout"
         android:layout_marginBottom="8dp"
-        tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="-2dp"
         tools:layout_editor_absoluteY="-5dp">
 
