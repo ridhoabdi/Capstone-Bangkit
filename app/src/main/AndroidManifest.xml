@@ -54,7 +54,7 @@
         <activity
             android:name=".ui.DashboardUI.Description.DescriptionActivity"
             android:exported="false"
-            android:label="@string/deskripsi" />
+            android:label="Article" />
         <activity
             android:name=".ui.DashboardUI.Upload.UploadActivity"
             android:exported="false"
