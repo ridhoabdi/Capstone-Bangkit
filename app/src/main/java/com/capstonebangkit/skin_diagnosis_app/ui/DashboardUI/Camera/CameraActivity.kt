@@ -1,14 +1,12 @@
 package com.capstonebangkit.skin_diagnosis_app.ui.DashboardUI.Camera
 
 import android.Manifest
-import android.content.ContentValues.TAG
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.graphics.BitmapFactory
 import android.net.Uri
 import android.os.Bundle
 import android.provider.MediaStore
-import android.util.Log
 import android.view.View
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
@@ -18,6 +16,7 @@ import androidx.core.content.ContextCompat
 import androidx.core.content.FileProvider
 import com.capstonebangkit.skin_diagnosis_app.R
 import com.capstonebangkit.skin_diagnosis_app.databinding.ActivityCameraBinding
+import com.capstonebangkit.skin_diagnosis_app.ui.DashboardUI.Deteksi.ResultScanNormal
 import com.capstonebangkit.skin_diagnosis_app.ui.DashboardUI.Deteksi.ScanActivity
 import com.capstonebangkit.skin_diagnosis_app.ui.DataApi.ApiConfig
 import com.capstonebangkit.skin_diagnosis_app.ui.DataApi.res
@@ -26,7 +25,6 @@ import com.capstonebangkit.skin_diagnosis_app.ui.utils.reduceFileImage
 import okhttp3.*
 import okhttp3.MediaType.Companion.toMediaTypeOrNull
 import okhttp3.RequestBody.Companion.asRequestBody
-import org.json.JSONObject
 import retrofit2.Call
 import retrofit2.Response
 import java.io.File
@@ -85,13 +83,21 @@ class CameraActivity : AppCompatActivity() {
                         Toast.LENGTH_SHORT).show()
                     val prediction = response.body()?.Prediksi
                     val precentation = response.body()?.Presentase
-                    val intent = Intent(this@CameraActivity, ScanActivity::class.java)
-                    intent.putExtra("prediksi","$prediction")
-                    intent.putExtra("presentasi","$precentation")
-                    intent.putExtra("picture", getFile!!.path.toString())
-//                    intent.putExtra("Obat", "$Obat")
-                    startActivity(intent)
-                    finish()
+                    if (prediction == "Normal"){
+                        val intent = Intent(this@CameraActivity, ResultScanNormal::class.java)
+                        intent.putExtra("prediksi","$prediction")
+                        intent.putExtra("presentasi","$precentation")
+                        intent.putExtra("picture", getFile!!.path.toString())
+                        startActivity(intent)
+                        finish()
+                    }else{
+                        val intent = Intent(this@CameraActivity, ScanActivity::class.java)
+                        intent.putExtra("prediksi","$prediction")
+                        intent.putExtra("presentasi","$precentation")
+                        intent.putExtra("picture", getFile!!.path.toString())
+                        startActivity(intent)
+                        finish()
+                    }
                 }
 
                 override fun onFailure(call: Call<res>, t: Throwable) {

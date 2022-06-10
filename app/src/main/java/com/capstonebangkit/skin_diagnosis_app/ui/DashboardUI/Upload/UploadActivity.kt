@@ -14,6 +14,7 @@ import androidx.core.content.ContextCompat
 import com.capstonebangkit.skin_diagnosis_app.R
 import com.capstonebangkit.skin_diagnosis_app.databinding.ActivityUploadBinding
 import com.capstonebangkit.skin_diagnosis_app.ui.DashboardUI.Camera.CameraActivity
+import com.capstonebangkit.skin_diagnosis_app.ui.DashboardUI.Deteksi.ResultScanNormal
 import com.capstonebangkit.skin_diagnosis_app.ui.DashboardUI.Deteksi.ScanActivity
 import com.capstonebangkit.skin_diagnosis_app.ui.DataApi.ApiConfig
 import com.capstonebangkit.skin_diagnosis_app.ui.DataApi.res
@@ -79,13 +80,28 @@ class UploadActivity : AppCompatActivity() {
                         Toast.LENGTH_SHORT).show()
                     val prediction = response.body()?.Prediksi
                     val precentation = response.body()?.Presentase
-                    val intent = Intent(this@UploadActivity, ScanActivity::class.java)
-                    intent.putExtra("prediksi","$prediction")
-                    intent.putExtra("presentasi","$precentation")
-                    intent.putExtra("picture", getFile!!.path.toString())
-//                    intent.putExtra("Obat", "$Obat")
-                    startActivity(intent)
-                    finish()
+//                    val intent = Intent(this@UploadActivity, ScanActivity::class.java)
+//                    intent.putExtra("prediksi","$prediction")
+//                    intent.putExtra("presentasi","$precentation")
+//                    intent.putExtra("picture", getFile!!.path.toString())
+////                    intent.putExtra("Obat", "$Obat")
+//                    startActivity(intent)
+//                    finish()
+                    if (prediction == "Normal"){
+                        val intent = Intent(this@UploadActivity, ResultScanNormal::class.java)
+                        intent.putExtra("prediksi","$prediction")
+                        intent.putExtra("presentasi","$precentation")
+                        intent.putExtra("picture", getFile!!.path.toString())
+                        startActivity(intent)
+                        finish()
+                    }else{
+                        val intent = Intent(this@UploadActivity, ScanActivity::class.java)
+                        intent.putExtra("prediksi","$prediction")
+                        intent.putExtra("presentasi","$precentation")
+                        intent.putExtra("picture", getFile!!.path.toString())
+                        startActivity(intent)
+                        finish()
+                    }
                 }
 
                 override fun onFailure(call: Call<res>, t: Throwable) {

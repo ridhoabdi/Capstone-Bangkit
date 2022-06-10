@@ -4,6 +4,7 @@ import tensorflow_hub as hub
 import numpy as np
 import matplotlib.image as mpimg
 
+
 def get_category(img):
     """Write a Function to Predict the Class Name
     Args:
@@ -13,7 +14,8 @@ def get_category(img):
         [str]: Presentase
     """
     model_file = 'model1.16-0.84.h5'
-    model = keras.models.load_model(model_file, custom_objects={'KerasLayer':hub.KerasLayer})
+    model = keras.models.load_model(model_file, custom_objects={
+                                    'KerasLayer': hub.KerasLayer})
 
     # Read an image from a file into a numpy array
     img = mpimg.imread(img)
@@ -29,8 +31,7 @@ def get_category(img):
     predicted_label = np.argmax(prediction, axis=1)
 
     persentase = "{:.2f}".format(np.max(prediction)*100)
-    class_names = ['chickenpox','Normal', 'Scabies']
+    class_names = ['Chickenpox', 'Normal', 'Scabies']
     Prediction = class_names[predicted_label[0]]
-    
-    return Prediction, persentase
 
+    return Prediction, persentase
