@@ -2,14 +2,15 @@ package com.capstonebangkit.skin_diagnosis_app.ui.DashboardUI.Deteksi
 
 import android.content.Intent
 import android.graphics.BitmapFactory
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import com.capstonebangkit.skin_diagnosis_app.R
-import com.capstonebangkit.skin_diagnosis_app.ui.DashboardUI.Camera.CameraActivity
+import com.capstonebangkit.skin_diagnosis_app.ui.MainActivity
+import com.capstonebangkit.skin_diagnosis_app.ui.ui.home.HomeFragment
 
 class ResultScanNormal : AppCompatActivity() {
     companion object {
@@ -25,9 +26,9 @@ class ResultScanNormal : AppCompatActivity() {
         val imgObat : ImageView = findViewById(R.id.imageObat)
         val btn : Button = findViewById(R.id.safePredict)
 
-        val hasilprediksi = intent.getStringExtra(ScanActivity.EXTRA_pred)
-        val hasilpresentase = intent.getStringExtra(ScanActivity.EXTRA_prec)
-        val hasilGambar = intent.getStringExtra(ScanActivity.EXTRA_pict)
+        val hasilprediksi = intent.getStringExtra(EXTRA_pred)
+        val hasilpresentase = intent.getStringExtra(EXTRA_prec)
+        val hasilGambar = intent.getStringExtra(EXTRA_pict)
         val result = BitmapFactory.decodeFile(hasilGambar)
         val text = "$hasilprediksi"
         val text2 = "$hasilpresentase"
@@ -37,10 +38,11 @@ class ResultScanNormal : AppCompatActivity() {
         imgObat.setImageBitmap(result)
 
         btn.setOnClickListener {
-            val intent = Intent(this, CameraActivity::class.java)
+            val intent = Intent(this, MainActivity::class.java)
             Toast.makeText(this, "Kulit Anda Normal", Toast.LENGTH_SHORT).show()
             startActivity(intent)
             finish()
+
         }
     }
 }

@@ -80,13 +80,6 @@ class UploadActivity : AppCompatActivity() {
                         Toast.LENGTH_SHORT).show()
                     val prediction = response.body()?.Prediksi
                     val precentation = response.body()?.Presentase
-//                    val intent = Intent(this@UploadActivity, ScanActivity::class.java)
-//                    intent.putExtra("prediksi","$prediction")
-//                    intent.putExtra("presentasi","$precentation")
-//                    intent.putExtra("picture", getFile!!.path.toString())
-////                    intent.putExtra("Obat", "$Obat")
-//                    startActivity(intent)
-//                    finish()
                     if (prediction == "Normal"){
                         val intent = Intent(this@UploadActivity, ResultScanNormal::class.java)
                         intent.putExtra("prediksi","$prediction")
