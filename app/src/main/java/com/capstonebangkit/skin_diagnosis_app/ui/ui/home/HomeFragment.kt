@@ -34,7 +34,7 @@ class HomeFragment : Fragment(), View.OnClickListener {
 
         val arraySlider = ArrayList<Int>()
         arraySlider.add(R.drawable.img_dermanosis)
-        arraySlider.add(R.drawable.contoh_slider_2)
+        arraySlider.add(R.drawable.slider2)
 
         val sliderAdapter = SliderAdapter(arraySlider, activity)
         vpSlider.adapter = sliderAdapter
