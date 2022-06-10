@@ -7,11 +7,10 @@
     android:id="@+id/Home_Frame"
     android:orientation="vertical"
     tools:context=".ui.ui.home.HomeFragment">
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="horizontal">
 
         <androidx.core.widget.NestedScrollView
             android:layout_width="match_parent"
@@ -32,7 +31,6 @@
 
 
     </LinearLayout>
-
 <!--cardviewpertama-->
     <LinearLayout
         android:layout_width="match_parent"
@@ -41,6 +39,7 @@
         android:layout_marginTop="16dp"
         android:layout_marginRight="20dp"
         android:gravity="center"
+        android:orientation="horizontal"
         android:padding="10dp">
         <!--cameraView-->
         <androidx.cardview.widget.CardView
@@ -111,6 +110,7 @@
         android:layout_marginTop="5dp"
         android:layout_marginRight="20dp"
         android:gravity="center"
+        android:orientation="horizontal"
         android:padding="10dp">
         <!--panduanView-->
         <androidx.cardview.widget.CardView
