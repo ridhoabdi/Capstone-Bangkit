@@ -18,9 +18,11 @@
         <entry key="..\:/android bangkit2022/capstone/Capstone-Bangkit/app/src/main/res/layout/fragment_profile.xml" value="0.16666666666666666" />
         <entry key="..\:/android bangkit2022/capstone/Capstone-Bangkit/app/src/main/res/menu/bottom_nav_menu.xml" value="0.1796875" />
         <entry key="..\:/android bangkit2022/capstone/Capstone-Bangkit/app/src/main/res/menu/setting.xml" value="0.1796875" />
+        <entry key="..\:/android bangkit2022/capstone/app/src/main/res/drawable/ic_Dermanosis_background.xml" value="0.1" />
         <entry key="..\:/android bangkit2022/capstone/app/src/main/res/drawable/ic_baseline_account_menu.xml" value="0.1125" />
         <entry key="..\:/android bangkit2022/capstone/app/src/main/res/drawable/ic_baseline_home_menu.xml" value="0.104" />
         <entry key="..\:/android bangkit2022/capstone/app/src/main/res/drawable/ic_dashboard_black_24dp.xml" value="0.104" />
+        <entry key="..\:/android bangkit2022/capstone/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1" />
         <entry key="..\:/android bangkit2022/capstone/app/src/main/res/layout/activity_camera.xml" value="0.17552083333333332" />
         <entry key="..\:/android bangkit2022/capstone/app/src/main/res/layout/activity_chickenpox.xml" value="0.17552083333333332" />
         <entry key="..\:/android bangkit2022/capstone/app/src/main/res/layout/activity_description.xml" value="0.17552083333333332" />
@@ -38,6 +40,9 @@
         <entry key="..\:/android bangkit2022/capstone/app/src/main/res/layout/fragment_saran.xml" value="0.16062176165803108" />
         <entry key="..\:/android bangkit2022/capstone/app/src/main/res/layout/item_newsarticle.xml" value="0.17552083333333332" />
         <entry key="..\:/android bangkit2022/capstone/app/src/main/res/menu/bottom_nav_menu.xml" value="0.17552083333333332" />
+        <entry key="..\:/android bangkit2022/capstone/app/src/main/res/mipmap-anydpi-v26/ic_Dermanosis_round.xml" value="0.1" />
+        <entry key="..\:/android bangkit2022/capstone/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1" />
+        <entry key="..\:/android bangkit2022/capstone/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.1" />
         <entry key="..\:/androidbangkit2022/capstone/Capstone-Bangkit/app/src/main/res/drawable-v24/ic_switch_camera.xml" value="0.1" />
         <entry key="..\:/androidbangkit2022/capstone/Capstone-Bangkit/app/src/main/res/drawable/bg_button.xml" value="0.1" />
         <entry key="..\:/androidbangkit2022/capstone/Capstone-Bangkit/app/src/main/res/drawable/edit_text_shadow.xml" value="0.1" />

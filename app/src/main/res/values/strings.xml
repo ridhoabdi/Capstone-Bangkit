@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Skin_Diagnosis_App</string>
+    <string name="app_name">Dermanosis</string>
     <string name="title_activity_main_home">MainActivityBeranda</string>
     <string name="title_home">Beranda</string>
     <string name="title_saran">Saran</string>

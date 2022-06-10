@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Skin_Diagnosis_App</string>
+    <string name="app_name">Dermanosis</string>
     <string name="title_activity_main_home">MainActivityHome</string>
     <string name="title_home">Home</string>
     <string name="title_saran">Suggestion</string>

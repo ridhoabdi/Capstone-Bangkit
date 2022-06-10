@@ -32,15 +32,6 @@
             android:exported="false"
             android:label="@string/prediction" />
         <activity
-            android:name=".ui.ui.message.MassageActivity"
-            android:exported="false" />
-        <activity
-            android:name=".ui.settingtheme.SettingThemeActivity"
-            android:exported="false" />
-        <activity
-            android:name=".ui.DashboardAction.XCamera.CameraActionActivity"
-            android:exported="false" />
-        <activity
             android:name=".ui.ui.register.RegisterActivity"
             android:exported="false"
             android:label="@string/register" />
