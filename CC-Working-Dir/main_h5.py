@@ -4,6 +4,10 @@ from proses import get_category
 
 app = Flask(__name__)
 
+@app.route("/")
+def showHomePage():
+    return "This is home page"
+
 # logging.basicConfig(filename='record.log', 
 #                     level=logging.DEBUG, 
 #                     format=f'%(asctime)s %(levelname)s %(name)s %(threadName)s : %(message)s')

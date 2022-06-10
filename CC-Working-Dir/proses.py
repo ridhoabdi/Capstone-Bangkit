@@ -12,7 +12,7 @@ def get_category(img):
         [str]: Prediction
         [str]: Presentase
     """
-    model_file = 'three_skin_disease.h5'
+    model_file = 'model1.16-0.84.h5'
     model = keras.models.load_model(model_file, custom_objects={'KerasLayer':hub.KerasLayer})
 
     # Read an image from a file into a numpy array
