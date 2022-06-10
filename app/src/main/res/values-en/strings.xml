@@ -31,10 +31,9 @@
     <string name="invalid_email">Invalid email!</string>
     <string name="password_more_6">Password must be longer than 6 characters!</string>
     <string name="copyright">© 2022 Bangkit Capstone Team C22-PS039</string>
-    <string name="title_welcome_page">Welcome to Skin Diagnosis App!</string>
-    <string name="title_register_page">Complete your data below, OK?</string>
-    <string name="title_login_page">Are you ready to know the type of skin disease?</string>
-    <string name="message_welcome_page">Want to know the type of skin disease but you still feel confused? Dont worry worry, we will help you. Lets join the Skin Diagnosis App!</string>
+    <string name="title_register_page">Welcome aboard</string>
+    <string name="title_login_page">Welcome back</string>
+    <string name="message_welcome_page">Want to know the type of skin disease but you still feel confused? Dont worry, we will help you. Lets join the Skin Diagnosis App!</string>
     <string name="login">Login</string>
     <string name="register">Register</string>
     <string name="name">Name</string>
@@ -48,7 +47,8 @@
     <string name="dark_mode">Dark Mode</string>
     <string name="logout">Logout</string>
     <string name="language">Language</string>
-    <string name="about_us">About us</string>
+    <string name="about_app">About app</string>
+    <string name="contact_us">Kontak kami</string>
 
     <!-- saran -->
     <string name="type_something">Type something...</string>
@@ -81,4 +81,5 @@
     <string name="prediction">prediction</string>
     <string name="presentase">presentase</string>
     <string name="obat">penanganan dan obat</string>
+    <string name="fill_register_form">Please fill in the registration form correctly</string>
 </resources>

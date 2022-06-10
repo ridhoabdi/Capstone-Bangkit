@@ -17,13 +17,14 @@ import androidx.datastore.preferences.preferencesDataStore
 import androidx.lifecycle.ViewModelProvider
 import com.capstonebangkit.skin_diagnosis_app.R
 import com.capstonebangkit.skin_diagnosis_app.databinding.FragmentProfileBinding
+import com.capstonebangkit.skin_diagnosis_app.ui.ui.about.AboutAppActivity
+import com.capstonebangkit.skin_diagnosis_app.ui.ui.contact.ContactUsActivity
 
 import com.capstonebangkit.skin_diagnosis_app.ui.ui.welcome.WelcomeUserActivity
 import com.google.android.material.switchmaterial.SwitchMaterial
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
-private val Context.dataStore: DataStore<Preferences> by preferencesDataStore(name = "settings")
 
 class ProfileFragment : Fragment() {
     private lateinit var auth: FirebaseAuth
@@ -59,31 +60,21 @@ class ProfileFragment : Fragment() {
         _binding = null
     }
 
-    @SuppressLint("FragmentLiveDataObserve")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val switchTheme = view.findViewById<SwitchMaterial>(R.id.switch_theme)
-        val pref = ProfilePreferences.getInstance(requireContext().dataStore)
-        val profileViewModel = ViewModelProvider(this, ViewModelFactory(pref))[ProfileViewModel::class.java]
-
-        profileViewModel.getThemeSettings().observe(this,
-        { isDarkModeActive: Boolean ->
-            if (isDarkModeActive) {
-                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
-                switchTheme.isChecked = true
-            } else {
-                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
-                switchTheme.isChecked = false
-            }
-        })
-
-        switchTheme.setOnCheckedChangeListener { _: CompoundButton?, isChecked: Boolean ->
-            profileViewModel.saveThemeSetting(isChecked)
-        }
-
         // language
         multipleLanguage()
+
+        // about app
+        binding.aboutApp.setOnClickListener {
+            aboutAppButton()
+        }
+
+        // contact us
+        binding.contactUs.setOnClickListener {
+            contactUsButton()
+        }
 
         // logout
         binding.logOut.setOnClickListener {
@@ -92,18 +83,29 @@ class ProfileFragment : Fragment() {
 
     }
 
+    private fun multipleLanguage() {
+        binding.switchLanguage.setOnClickListener {
+            startActivity(Intent(Settings.ACTION_LOCALE_SETTINGS))
+        }
+    }
+
+    private fun aboutAppButton() {
+        val a = Intent(context, AboutAppActivity::class.java)
+        startActivity(a)
+    }
+
+    private fun contactUsButton() {
+        val c = Intent(context, ContactUsActivity::class.java)
+        startActivity(c)
+    }
+
+
     private fun logoutButton() {
         auth = FirebaseAuth.getInstance()
         auth.signOut()
         val i = Intent(context, WelcomeUserActivity::class.java)
         startActivity(i)
         activity?.finish()
-    }
-
-    private fun multipleLanguage() {
-        binding.switchLanguage.setOnClickListener {
-            startActivity(Intent(Settings.ACTION_LOCALE_SETTINGS))
-        }
     }
 
 

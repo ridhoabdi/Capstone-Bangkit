@@ -53,20 +53,19 @@ class WelcomeUserActivity : AppCompatActivity() {
     }
 
     private fun playAnimation() {
-
+        val imgView = ObjectAnimator.ofFloat(binding.imageView, View.ALPHA, 1f).setDuration(500)
+        val desc = ObjectAnimator.ofFloat(binding.descTextView, View.ALPHA, 1f).setDuration(500)
         val login = ObjectAnimator.ofFloat(binding.loginButton, View.ALPHA, 1f).setDuration(500)
         val signup = ObjectAnimator.ofFloat(binding.signupButton, View.ALPHA, 1f).setDuration(500)
-        val desc = ObjectAnimator.ofFloat(binding.descTextView, View.ALPHA, 1f).setDuration(500)
 
-        val together = AnimatorSet().apply {
-            playTogether(login, signup)
-        }
 
         AnimatorSet().apply {
-            playSequentially(desc, together)
+            playSequentially(imgView, desc, login, signup)
             start()
         }
+
     }
+
     override fun onStart() {
         super.onStart()
         if(auth.currentUser != null){

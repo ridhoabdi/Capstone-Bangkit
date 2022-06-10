@@ -1,25 +1,13 @@
 package com.capstonebangkit.skin_diagnosis_app.ui.ui.home
 
-import android.annotation.SuppressLint
-import android.content.Context
 import android.content.Intent
-import android.os.Build
 import android.os.Bundle
-import android.text.Html
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
-import androidx.appcompat.app.AppCompatDelegate
 import androidx.cardview.widget.CardView
-import androidx.core.content.ContextCompat
-import androidx.datastore.core.DataStore
-import androidx.datastore.preferences.core.Preferences
-import androidx.datastore.preferences.preferencesDataStore
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModelProvider
 import androidx.viewpager.widget.ViewPager
-import androidx.viewpager2.widget.ViewPager2
 import com.capstonebangkit.skin_diagnosis_app.R
 import com.capstonebangkit.skin_diagnosis_app.databinding.FragmentHomeBinding
 import com.capstonebangkit.skin_diagnosis_app.ui.DashboardUI.Camera.CameraActivity
@@ -27,11 +15,7 @@ import com.capstonebangkit.skin_diagnosis_app.ui.DashboardUI.Description.Descrip
 import com.capstonebangkit.skin_diagnosis_app.ui.DashboardUI.Panduan.PanduanActivity
 import com.capstonebangkit.skin_diagnosis_app.ui.DashboardUI.Upload.UploadActivity
 import com.capstonebangkit.skin_diagnosis_app.ui.adapter.SliderAdapter
-import com.capstonebangkit.skin_diagnosis_app.ui.ui.profile.ProfilePreferences
-import com.capstonebangkit.skin_diagnosis_app.ui.ui.profile.ProfileViewModel
-import com.capstonebangkit.skin_diagnosis_app.ui.ui.profile.ViewModelFactory
 
-//private val Context.dataStore: DataStore<Preferences> by preferencesDataStore(name = "settings")
 
 class HomeFragment : Fragment(), View.OnClickListener {
 
@@ -65,7 +49,6 @@ class HomeFragment : Fragment(), View.OnClickListener {
     }
 
 
-//    @SuppressLint("FragmentLiveDataObserve")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         //deskripsikan variabel
@@ -79,20 +62,6 @@ class HomeFragment : Fragment(), View.OnClickListener {
         cardUploadAction.setOnClickListener(this)
         cardPanduanAction.setOnClickListener(this)
         cardDescriptionAction.setOnClickListener(this)
-
-//        val pref = ProfilePreferences.getInstance(requireContext().dataStore)
-//        val profileViewModel = ViewModelProvider(this, ViewModelFactory(pref)).get(
-//            ProfileViewModel::class.java
-//        )
-
-//        profileViewModel.getThemeSettings().observe(this,
-//            { isDarkModeActive: Boolean ->
-//                if (isDarkModeActive) {
-//                    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
-//                } else {
-//                    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
-//                }
-//            })
 
     }
 

@@ -30,9 +30,8 @@
     <string name="invalid_email">Email tidak valid!</string>
     <string name="password_more_6">Password harus lebih dari 6 karakter</string>
     <string name="copyright">© 2022 Bangkit Capstone Team C22-PS039</string>
-    <string name="title_welcome_page">Selamat Datang di Skin Diagnosis App!</string>
-    <string name="title_register_page">Lengkapi data dirimu di bawah ini ya</string>
-    <string name="title_login_page">Sudah siap untuk mengetahui jenis penyakit kulit?</string>
+    <string name="title_register_page">Selamat bergabung</string>
+    <string name="title_login_page">Selamat datang kembali</string>
     <string name="message_welcome_page">Ingin mengetahui jenis penyakit kulit akan tetapi Anda masih merasa bingung ? Jangan khawatir, kami akan membantu Anda. Yuk bergabung di Skin Diagnosis App!</string>
     <string name="login">Masuk</string>
     <string name="register">Daftar</string>
@@ -40,14 +39,15 @@
     <string name="email">Email</string>
     <string name="password">Password</string>
     <string name="already_have_account">Sudah punya akun?</string>
-    <string name="not_have_account">Belum punya akun</string>
+    <string name="not_have_account">Belum punya akun?</string>
 
     <!-- profile -->
     <string name="setting">Pengaturan</string>
     <string name="dark_mode">Mode gelap</string>
     <string name="logout">Keluar</string>
     <string name="language">Bahasa</string>
-    <string name="about_us">Tentang kami</string>
+    <string name="about_app">Tentang aplikasi</string>
+    <string name="contact_us">Kontak kami</string>
 
     <!-- saran -->
     <string name="type_something">Ketikkan sesuatu...</string>
@@ -59,7 +59,7 @@
     <string name="tab_text_1">Kamera</string>
     <string name="tab_text_2">Unggah</string>
     <string name="content_tab_camera">Panduan dengan camera</string>
-    <string name="content_tab_upload">Panduan dengan upload</string>
+    <string name="content_tab_upload">Panduan dengan unggah</string>
     <string name="content_tab_text">This is Tab %1$d</string>
     <string name="upload_sukses">Sukses upload</string>
     <string name="Upload_Gagal">Gagal Upload</string>
@@ -80,7 +80,7 @@
     <string name="prediction">prediction</string>
     <string name="presentase">presentase</string>
     <string name="obat">penanganan dan obat</string>
-
+    <string name="fill_register_form">Mohon isi form registrasi dengan benar</string>
 
 
 </resources>

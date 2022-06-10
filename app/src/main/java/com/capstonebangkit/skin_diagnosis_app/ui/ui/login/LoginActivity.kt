@@ -1,10 +1,15 @@
 package com.capstonebangkit.skin_diagnosis_app.ui.ui.login
 
+import android.animation.AnimatorSet
+import android.animation.ObjectAnimator
 import android.content.Intent
+import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Patterns
 import android.view.View
+import android.view.WindowInsets
+import android.view.WindowManager
 import android.widget.Toast
 import com.capstonebangkit.skin_diagnosis_app.databinding.ActivityLoginBinding
 import com.capstonebangkit.skin_diagnosis_app.ui.MainActivity
@@ -19,6 +24,9 @@ class LoginActivity : AppCompatActivity() {
         binding = ActivityLoginBinding.inflate(layoutInflater)
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
+
+        setupView()
+        playAnimation()
 
         auth = FirebaseAuth.getInstance()
 
@@ -56,6 +64,34 @@ class LoginActivity : AppCompatActivity() {
             LoginFirebase(email,password)
         }
 
+    }
+
+    private fun setupView() {
+        @Suppress("DEPRECATION")
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
+            window.insetsController?.hide(WindowInsets.Type.statusBars())
+        } else {
+            window.setFlags(
+                WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN
+            )
+        }
+        supportActionBar?.hide()
+    }
+
+    private fun playAnimation() {
+        val loginText1 = ObjectAnimator.ofFloat(binding.loginText1, View.ALPHA, 1f).setDuration(500)
+        val imgLogin = ObjectAnimator.ofFloat(binding.image2, View.ALPHA, 1f).setDuration(500)
+        val emailEdt = ObjectAnimator.ofFloat(binding.emailEditText, View.ALPHA, 1f).setDuration(500)
+        val passEdt = ObjectAnimator.ofFloat(binding.passwordEditText, View.ALPHA, 1f).setDuration(500)
+        val btnLogin = ObjectAnimator.ofFloat(binding.btnLogin, View.ALPHA, 1f).setDuration(500)
+        val tvHaventAccount = ObjectAnimator.ofFloat(binding.tvHaventAccount, View.ALPHA, 1f).setDuration(500)
+        val tvRegis = ObjectAnimator.ofFloat(binding.tvRegister, View.ALPHA, 1f).setDuration(500)
+
+        AnimatorSet().apply {
+            playSequentially(loginText1, imgLogin, emailEdt, passEdt, btnLogin, tvHaventAccount, tvRegis)
+            start()
+        }
     }
 
     private fun LoginFirebase(email: String, password: String) {

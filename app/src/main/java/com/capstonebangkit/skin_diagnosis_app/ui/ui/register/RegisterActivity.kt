@@ -1,10 +1,15 @@
 package com.capstonebangkit.skin_diagnosis_app.ui.ui.register
 
+import android.animation.AnimatorSet
+import android.animation.ObjectAnimator
 import android.content.Intent
+import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Patterns
 import android.view.View
+import android.view.WindowInsets
+import android.view.WindowManager
 import android.widget.Toast
 import com.capstonebangkit.skin_diagnosis_app.databinding.ActivityRegisterBinding
 import com.capstonebangkit.skin_diagnosis_app.ui.MainActivity
@@ -20,6 +25,9 @@ class RegisterActivity : AppCompatActivity() {
         binding = ActivityRegisterBinding.inflate(layoutInflater)
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
+
+        setupView()
+        playAnimation()
 
         auth = FirebaseAuth.getInstance()
 
@@ -58,6 +66,35 @@ class RegisterActivity : AppCompatActivity() {
                 return@setOnClickListener
             }
             RegisterFirebase(nama,email,password)
+        }
+    }
+
+    private fun setupView() {
+        @Suppress("DEPRECATION")
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
+            window.insetsController?.hide(WindowInsets.Type.statusBars())
+        } else {
+            window.setFlags(
+                WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN
+            )
+        }
+        supportActionBar?.hide()
+    }
+
+    private fun playAnimation() {
+        val regisText1 = ObjectAnimator.ofFloat(binding.registerText1, View.ALPHA, 1f).setDuration(500)
+        val regisText2 = ObjectAnimator.ofFloat(binding.registerText2, View.ALPHA, 1f).setDuration(500)
+        val nameEdt = ObjectAnimator.ofFloat(binding.nameEditText, View.ALPHA, 1f).setDuration(500)
+        val emailEdt = ObjectAnimator.ofFloat(binding.emailEditText, View.ALPHA, 1f).setDuration(500)
+        val passEdt = ObjectAnimator.ofFloat(binding.passwordEditText, View.ALPHA, 1f).setDuration(500)
+        val btnRegis = ObjectAnimator.ofFloat(binding.btnRegister, View.ALPHA, 1f).setDuration(500)
+        val tvHaveAccount = ObjectAnimator.ofFloat(binding.tvHaveAccount, View.ALPHA, 1f).setDuration(500)
+        val tvLoginAccount = ObjectAnimator.ofFloat(binding.tvLogin, View.ALPHA, 1f).setDuration(500)
+
+        AnimatorSet().apply {
+            playSequentially(regisText1, regisText2, nameEdt, emailEdt, passEdt, btnRegis, tvHaveAccount, tvLoginAccount)
+            start()
         }
     }
 

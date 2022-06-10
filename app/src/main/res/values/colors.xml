@@ -11,9 +11,9 @@
     <color name="bgBottom">#0D3D6B</color>
     <color name="bgTheme">#0D3D6B</color>
     <color name="birumuda">#65ACD6</color>
+    <color name="birumuda2">#AED5EC</color>
     <color name="biru">#031BED</color>
-<!--    <color name="hijaumuda">#02FF95</color>-->
-<!--    <color name="hijautua">#2FA674</color>-->
+    <color name="abumuda">#D3D3D3</color>
 
     <color name="firebase_gray">#ECEFF1</color>
     <color name="firebase_orange">#F57C00</color>

@@ -25,10 +25,7 @@ class SaranFragment : Fragment() {
     private lateinit var auth: FirebaseAuth
     private lateinit var db: FirebaseDatabase
     private lateinit var adapter: FirebaseMessageAdapter
-//    private val Context.dataStore: DataStore<Preferences> by preferencesDataStore(name = "settings")
 
-    // This property is only valid between onCreateView and
-    // onDestroyView.
     private val binding get() = _binding!!
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
@@ -41,7 +38,6 @@ class SaranFragment : Fragment() {
         return root
     }
 
-//    @SuppressLint("FragmentLiveDataObserve")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         auth = Firebase.auth
@@ -80,21 +76,6 @@ class SaranFragment : Fragment() {
             .build()
         adapter = FirebaseMessageAdapter(options, firebaseUser.displayName)
         binding.messageRecyclerView.adapter = adapter
-
-//        val pref = SettingPreferences.getInstance(requireContext().dataStore)
-//        val settingsViewModel = ViewModelProvider(this, ViewModelFactory(pref)).get(
-//            ProfileViewModel::class.java
-//        )
-//
-//        settingsViewModel.getThemeSettings().observe(this
-//        ) { isDarkModeActive: Boolean ->
-//            if (isDarkModeActive) {
-//                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
-//            } else {
-//                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
-//            }
-//        }
-
 
     }
     public override fun onResume() {

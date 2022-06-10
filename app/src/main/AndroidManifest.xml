@@ -20,13 +20,19 @@
         android:theme="@style/Theme.Skin_Diagnosis_App"
         android:usesCleartextTraffic="true">
         <activity
-            android:name=".ui.DashboardUI.safeDeteksi.ChickenpoxActivity"
-            android:label="Chickenpox"
+            android:name=".ui.ui.contact.ContactUsActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.DashboardUI.safeDeteksi.ScabiesActivity"
-            android:label="Scabies"
+            android:name=".ui.ui.about.AboutAppActivity"
             android:exported="false" />
+        <activity
+            android:name=".ui.DashboardUI.safeDeteksi.ChickenpoxActivity"
+            android:exported="false"
+            android:label="Chickenpox" />
+        <activity
+            android:name=".ui.DashboardUI.safeDeteksi.ScabiesActivity"
+            android:exported="false"
+            android:label="Scabies" />
         <activity
             android:name=".ui.DashboardUI.Deteksi.ScanActivity"
             android:exported="false"
