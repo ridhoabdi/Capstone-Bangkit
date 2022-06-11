@@ -7,7 +7,7 @@
         android:id="@+id/img_slider"
         android:layout_width="match_parent"
         android:layout_height="200dp"
-        android:src="@drawable/contoh_slider_1"
+        android:src="@drawable/slider1"
         android:scaleType="fitXY"/>
 
 </RelativeLayout>
