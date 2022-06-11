@@ -108,6 +108,10 @@ class CameraActivity : AppCompatActivity() {
                     ).show()
                 }
             })
+        }else{
+            showLoading(false)
+            Toast.makeText(this@CameraActivity,getString(R.string.send_error),
+                Toast.LENGTH_SHORT).show()
         }
     }
 

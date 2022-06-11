@@ -105,6 +105,10 @@ class UploadActivity : AppCompatActivity() {
                     ).show()
                 }
             })
+        }else{
+            showLoading(false)
+            Toast.makeText(this,getString(R.string.send_error),
+                Toast.LENGTH_SHORT).show()
         }
     }
 
