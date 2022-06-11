@@ -20,6 +20,9 @@
         android:theme="@style/Theme.Skin_Diagnosis_App"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".ui.ui.contact.DetailMemberActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.DashboardUI.Deteksi.ResultScanNormal"
             android:exported="false" />
         <activity

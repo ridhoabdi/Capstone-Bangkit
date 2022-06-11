@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.ui.contact.DetailMemberActivity">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/edt_text_image_member"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp"
+        tools:src="@tools:sample/avatars" />
+
+    <LinearLayout
+        android:id="@+id/ly_about_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edt_text_image_member"
+        android:layout_marginStart="32dp"
+        android:gravity="center_vertical"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="32dp">
+
+        <LinearLayout
+            android:id="@+id/ly_about_1_sub1"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_person" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ly_about_1_sub2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:text="@string/name" />
+
+            <TextView
+                android:id="@+id/edt_text_name_member"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:textColor="@color/black" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ly_about_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ly_about_1"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:gravity="center_vertical">
+
+        <LinearLayout
+            android:id="@+id/ly_about_2_sub1"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_email_grey" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ly_about_2_sub2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:text="@string/email" />
+
+            <TextView
+                android:id="@+id/edt_text_email_member"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:textColor="@color/black" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ly_about_3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ly_about_2"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:gravity="center_vertical">
+
+        <LinearLayout
+            android:id="@+id/ly_about_3_sub1"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_phone_grey" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ly_about_3_sub2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:text="@string/phone_number" />
+
+            <TextView
+                android:id="@+id/edt_text_phone_number_member"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:textColor="@color/black" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

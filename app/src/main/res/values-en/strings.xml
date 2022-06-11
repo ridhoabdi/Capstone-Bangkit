@@ -41,6 +41,7 @@
     <string name="password">Password</string>
     <string name="already_have_account">Already have an account?</string>
     <string name="not_have_account">Dont have an account yet</string>
+    <string name="fill_register_form">Please fill in the registration form correctly</string>
 
     <!-- profile -->
     <string name="setting">Setting</string>
@@ -81,5 +82,39 @@
     <string name="prediction">prediction</string>
     <string name="presentase">presentase</string>
     <string name="obat">penanganan dan obat</string>
-    <string name="fill_register_form">Please fill in the registration form correctly</string>
+
+    <!-- contact us -->
+    <string name="fullname_member_team">Name</string>
+    <string name="email_member">Email</string>
+    <string name="phone_number">Phone number</string>
+    <string name="detail_member">Member detail</string>
+
+    <string name="name_1">Ivani</string>
+    <string name="name_2">Nitis</string>
+    <string name="name_3">Ridho</string>
+    <string name="name_4">Kukuh</string>
+    <string name="name_5">Irkham</string>
+    <string name="name_6">Haya</string>
+
+    <string name="member_1">Muhammad Ivani</string>
+    <string name="member_2">Muhammad Nitis Jatnika Permana</string>
+    <string name="member_3">Muhammad Ridho Abdillah</string>
+    <string name="member_4">Kukuh Biyantama</string>
+    <string name="member_5">Muhammad Irkham Hidayat</string>
+    <string name="member_6">Haya Rohmatunnisa</string>
+
+    <string name="email_1">muh.ivani55@students.unnes.ac.id</string>
+    <string name="email_2">nitismuhammad10@gmail.com</string>
+    <string name="email_3">111201912211@mhs.dinus.ac.id</string>
+    <string name="email_4">111201912208@mhs.dinus.ac.id</string>
+    <string name="email_5">111201912362@mhs.dinus.ac.id</string>
+    <string name="email_6">hayarohmatunnisa14@students.unnes.ac.id</string>
+
+    <string name="phone_1">0822 4442 5154</string>
+    <string name="phone_2">0821 2660 7503</string>
+    <string name="phone_3">0877 0898 3363</string>
+    <string name="phone_4">0821 7583 4153</string>
+    <string name="phone_5">0895 1260 4675</string>
+    <string name="phone_6">0888 0672 2401</string>
+
 </resources>
