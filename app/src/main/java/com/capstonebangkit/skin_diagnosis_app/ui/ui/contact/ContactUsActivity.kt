@@ -83,7 +83,7 @@ class ContactUsActivity : AppCompatActivity(), View.OnClickListener {
             R.id.member6->{
                 val moveWithDataIntent = Intent(this, DetailMemberActivity::class.java)
                 moveWithDataIntent.putExtra(DetailMemberActivity.EXTRA_NAME, getString(R.string.member_6))
-                moveWithDataIntent.putExtra("image", R.drawable.ic_account_circle)
+                moveWithDataIntent.putExtra("image", R.drawable.member6)
                 moveWithDataIntent.putExtra(DetailMemberActivity.EXTRA_EMAIL, getString(R.string.email_6))
                 moveWithDataIntent.putExtra(DetailMemberActivity.EXTRA_NOHP, getString(R.string.phone_6))
                 startActivity(moveWithDataIntent)
