@@ -12,7 +12,7 @@ Download or load our dataset [here](https://drive.google.com/u/0/uc?id=1EML4UmDg
 
 ## Preparing and Training
 - Using `ImageDataGenerator` to augmented the dataset and make better training proses
-- Choose `MobilenetV2` transer learning as pretrained model
+- Choose `MobilenetV2` transfer learning as pre-trained model
 - Using `Adamax` as Optimizer
 - Using `SparseCategoricalCrossentropy` as loss
 - Adding more layer when using `tf.keras.Sequential` like:
