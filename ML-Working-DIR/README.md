@@ -15,8 +15,9 @@ Download or load our dataset [here](https://drive.google.com/u/0/uc?id=1EML4UmDg
 - Using `SparseCategoricalCrossentropy` as loss
 - Adding more layer when using `tf.keras.Sequential` like:
   -  Add `Dense` layer with `32` unit and `relu` as activation
-  -  Add `Dropout` layesr with 20% value to avoid overfitting
+  -  Add `Dropout` layer with `0.2` value to avoid overfitting
   -  Add `Dense` layer again with `32` unit and `relu` as activation
+  -  Add `Dropout` layer with `0.4` value to avoid overfitting
   -  And final layer using `Dense` with `3` unit and `softmax` as activation
 - Defining `ModelCheckpoint` in every epochs and saved the best model with *.h5
 - Training with  30 epoch
