@@ -27,7 +27,8 @@ Download or load our dataset [here](https://drive.google.com/u/0/uc?id=1EML4UmDg
   - `val_accuracy: 84%`
 
 ## The Model
-[Here](https://drive.google.com/drive/folders/19YdGU8xvtLl_P3_C6Nb7_sR1FU7UOjjW?usp=sharing) our model documentation to get the best model we use
+[Here](https://drive.google.com/drive/folders/19YdGU8xvtLl_P3_C6Nb7_sR1FU7UOjjW?usp=sharing) our model documentation to get the best model we use.
+
 Download our best model [here](https://drive.google.com/file/d/107fvLNaXsLk2OTvCVbLQb-JrxHN_5Jpk/view?usp=sharing)
 
 
