@@ -3,17 +3,20 @@ The function of this repository is to documentation everything that ML team did 
 Team id C22-PS039
 
 ## Google Colab Notebook
-Feel experiment with our final notebook [here](https://colab.research.google.com/drive/18z39wPGyB9IWbrKQA4boUY-OX5Q_6EUt?usp=sharing)
+Feel experiment build the model with our final notebook [here](https://colab.research.google.com/drive/18z39wPGyB9IWbrKQA4boUY-OX5Q_6EUt?usp=sharing)
+
+Test our model using interference [here](https://colab.research.google.com/drive/119h_J67ZwbvjEBxSGdyKPShY1ylc8L0k?usp=sharing)
 
 ## Dataset
 Download or load our dataset [here](https://drive.google.com/u/0/uc?id=1EML4UmDgQFrVv7zbPpdoGp6JSHIg6fOX&export=download)
 
 ## Preparing and Training
 - Using `ImageDataGenerator` to augmented the dataset and make better training proses
-- Choose `MobilenetV2` transer learning as pretrained model
+- Choose `MobilenetV2` transfer learning as pre-trained model
 - Using `Adamax` as Optimizer
 - Using `SparseCategoricalCrossentropy` as loss
 - Adding more layer when using `tf.keras.Sequential` like:
+  -  Add `Flatten` layer
   -  Add `Dense` layer with `32` unit and `relu` as activation
   -  Add `Dropout` layer with `0.2` value to avoid overfitting
   -  Add `Dense` layer again with `32` unit and `relu` as activation
