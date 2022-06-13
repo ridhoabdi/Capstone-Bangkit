@@ -2,7 +2,7 @@
 We created the mobile application that can help identify skin diseases (Chickenpox, scabies, tinea versicolor, and herpes). Which will give advice on the first treatment or certain drugs before going to dermatologist. 
 And we expected to help time efficiency for puskesmas/medical clinic officers in patient treatment services. So for patients who want to consultation with doctor, they don't interfere with patients who are waiting to be examined by a doctor immediately.
 
-#apps Dermanosis Debug
+# Apps Dermanosis Debug
 get link this : https://drive.google.com/file/d/1JJw4zQi-Z_aa0CeevgmTMfjhLVm8yYDw/view?usp=sharing
 
 # Here are the steps to run the Dermanosis Application:
@@ -12,7 +12,7 @@ can you install this apps https://drive.google.com/file/d/1JJw4zQi-Z_aa0CeevgmTM
 # You can install with 3 versions :
 - First, the ZIP version of the file. You can install by pressing the code button, then press the Download ZIP button.
 - Second, the cloned version uses a link, you can press the code button, then copy the https URL, then use Git Bash to download the application.
-- third, download app-debug.apk get link Apps Dermanosis debug  
+- Third, download app-debug.apk get link Apps Dermanosis debug google drive
 
 
 # Here are the steps to use the Application:
