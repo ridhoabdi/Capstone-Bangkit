@@ -33,7 +33,7 @@
     <string name="copyright">© 2022 Bangkit Capstone Team C22-PS039</string>
     <string name="title_register_page">Welcome aboard</string>
     <string name="title_login_page">Welcome back</string>
-    <string name="message_welcome_page">Want to know the type of skin disease but you still feel confused? Dont worry, we will help you. Lets join the Skin Diagnosis App!</string>
+    <string name="message_welcome_page">Want to know the type of skin disease but you still feel confused? Dont worry, we will help you. Lets join Dermanosis!</string>
     <string name="login">Login</string>
     <string name="register">Register</string>
     <string name="name">Name</string>
@@ -45,7 +45,6 @@
 
     <!-- profile -->
     <string name="setting">Setting</string>
-    <string name="dark_mode">Dark Mode</string>
     <string name="logout">Logout</string>
     <string name="language">Language</string>
     <string name="about_app">About app</string>
@@ -69,7 +68,7 @@
     <string name="camera_step_2">If you have registered, enter your Email and Password to enter the Application</string>
     <string name="camera_step_3">On the Home Dashboard, click the Camera icon to process the detection scan from the camera results</string>
     <string name="camera_step_4">Click the Camera button, then allow camera access from your device</string>
-    <string name="camera_step_5">Point your camera at the skin you want to detect and take a picture</string>
+    <string name="camera_step_5">Point your camera to get an image on the skin you want to detect</string>
     <string name="camera_step_6">Finally, click the Result button, the system will automatically display the detection results from the images you take from the camera</string>
     <string name="upload_step_1">Register your account first by filling in your Name, Email, Password in the form provided</string>
     <string name="upload_step_2">If you have registered, enter your Email and Password to enter the Application</string>

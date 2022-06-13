@@ -32,7 +32,7 @@
     <string name="copyright">© 2022 Bangkit Capstone Team C22-PS039</string>
     <string name="title_register_page">Selamat bergabung</string>
     <string name="title_login_page">Selamat datang kembali</string>
-    <string name="message_welcome_page">Ingin mengetahui jenis penyakit kulit akan tetapi Anda masih merasa bingung ? Jangan khawatir, kami akan membantu Anda. Yuk bergabung di Skin Diagnosis App!</string>
+    <string name="message_welcome_page">Ingin mengetahui jenis penyakit kulit akan tetapi Anda masih merasa bingung ? Jangan khawatir, kami akan membantu Anda. Yuk bergabung di Dermanosis!</string>
     <string name="login">Masuk</string>
     <string name="register">Daftar</string>
     <string name="name">Nama</string>
@@ -44,7 +44,6 @@
 
     <!-- profile -->
     <string name="setting">Pengaturan</string>
-    <string name="dark_mode">Mode gelap</string>
     <string name="logout">Keluar</string>
     <string name="language">Bahasa</string>
     <string name="about_app">Tentang aplikasi</string>
@@ -59,7 +58,7 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="tab_text_1">Kamera</string>
     <string name="tab_text_2">Unggah</string>
-    <string name="content_tab_camera">Panduan dengan camera</string>
+    <string name="content_tab_camera">Panduan dengan kamera</string>
     <string name="content_tab_upload">Panduan dengan unggah</string>
     <string name="content_tab_text">This is Tab %1$d</string>
     <string name="upload_sukses">Sukses upload</string>
@@ -68,8 +67,8 @@
     <string name="camera_step_2">Jika sudah mendaftar, masukkan Email dan Password untuk masuk ke Aplikasi</string>
     <string name="camera_step_3">Pada Dashboard Beranda, klik ikon Kamera untuk melakukan memproses scan deteksi dari hasil kamera</string>
     <string name="camera_step_4">Klik tombol Kamera, kemudian izinkan akses kamera dari device Anda</string>
-    <string name="camera_step_5">Arahkan kamera Anda pada kulit yang ingin dideteksi dan ambil gambar</string>
-    <string name="camera_step_6">Terakhir, klik tombol Hasil, maka sistem secara otomatis akan menampilkan hasil deteksi dari gambar yang Anda ambil dari kamera</string>
+    <string name="camera_step_5">Arahkan kamera Anda untuk mendapatkan gambar pada kulit yang ingin dideteksi</string>
+    <string name="camera_step_6">Terakhir, klik tombol Hasil, maka sistem secara otomatis akan menampilkan hasil deteksi dari gambar yang telah Anda ambil dari kamera</string>
     <string name="upload_step_1">Daftarkan akun anda terlebih dahulu dengan mengisi Nama, Email, Password pada form yang telah disediakan</string>
     <string name="upload_step_2">Jika sudah mendaftar, masukkan Email dan Password untuk masuk ke Aplikasi</string>
     <string name="upload_step_3">Pada Dashboard Beranda, klik ikon Unggah untuk melakukan memproses scan deteksi dari hasil unggah gambar</string>
