@@ -29,7 +29,7 @@ can you install this apps https://drive.google.com/file/d/1JJw4zQi-Z_aa0CeevgmTM
 - Second, the cloned version uses a link, you can press the code button, then copy the https URL, then use Git Bash to download the application.
 - Third, download app-debug.apk get link Apps Dermanosis debug google drive
 
-#### Here are the steps to use the Application:
+### Here are the steps to use the Application:
 - Before entering the Application, you must register by filling in your name, email and password.
 - Then, proceed with the Login process to enter the Application.
 
