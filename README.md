@@ -18,10 +18,15 @@ And we expected to help time efficiency for puskesmas/medical clinic officers in
 - <b>Language Selection : </b> Application interface that can be customized to Indonesian and English for global accessibility.
 
 ## Screenshot
-will be added
+
+| Login Page | Landing Page | Register Page |
+|---------|---------|---------|
+| [![Gambar 1](https://github.com/ridhoabdi/portfolio/blob/main/images/readme-each-repository/dermanosis-app/landing-page-login.png)](https://github.com/ridhoabdi/portfolio/blob/main/images/readme-each-repository/dermanosis-app/landing-page-login.png) | [![Gambar 2](https://github.com/ridhoabdi/portfolio/blob/main/images/readme-each-repository/dermanosis-app/landing-page.png)](https://github.com/ridhoabdi/portfolio/blob/main/images/readme-each-repository/dermanosis-app/landing-page.png) | [![Gambar 3](https://github.com/ridhoabdi/portfolio/blob/main/images/readme-each-repository/dermanosis-app/landing-page-register.png)](https://github.com/ridhoabdi/portfolio/blob/main/images/readme-each-repository/dermanosis-app/landing-page-register.png) |
+
+another screenshots will be added
 
 ## Here are the steps to run the Dermanosis Application:
-Open the link https://github.com/kukuh-biyantama/Capstone-Bangkit.git or
+Open the link https://github.com/ridhoabdi/Capstone-Bangkit.git or
 can you install this apps https://drive.google.com/file/d/1JJw4zQi-Z_aa0CeevgmTMfjhLVm8yYDw/view?usp=sharing
 
 ### You can install with 3 versions :
