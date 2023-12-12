@@ -25,9 +25,11 @@ And we expected to help time efficiency for puskesmas/medical clinic officers in
 
 | Guide Page | Home Page | Settings Page |
 |---------|---------|---------|
-| [![Gambar 4](https://github.com/ridhoabdi/portfolio/blob/main/images/readme-each-repository/dermanosis-app/guide.png)] | [![Gambar 5](https://github.com/ridhoabdi/portfolio/blob/main/images/readme-each-repository/dermanosis-app/home.png)] | [![Gambar 6](https://github.com/ridhoabdi/portfolio/blob/main/images/readme-each-repository/dermanosis-app/settings.png)] |
+| [![Gambar 4](https://github.com/ridhoabdi/portfolio/blob/main/images/readme-each-repository/dermanosis-app/guide.png)](https://github.com/ridhoabdi/portfolio/blob/main/images/readme-each-repository/dermanosis-app/guide.png) | [![Gambar 5](https://github.com/ridhoabdi/portfolio/blob/main/images/readme-each-repository/dermanosis-app/home.png)](https://github.com/ridhoabdi/portfolio/blob/main/images/readme-each-repository/dermanosis-app/home.png) | [![Gambar 6](https://github.com/ridhoabdi/portfolio/blob/main/images/readme-each-repository/dermanosis-app/settings.png)](https://github.com/ridhoabdi/portfolio/blob/main/images/readme-each-repository/dermanosis-app/settings.png) |
 
-another screenshots will be added
+| Camera Page | Prediction Page | Treatments Page |
+|---------|---------|---------|
+| [![Gambar 7](https://github.com/ridhoabdi/portfolio/blob/main/images/readme-each-repository/dermanosis-app/upload.png)](https://github.com/ridhoabdi/portfolio/blob/main/images/readme-each-repository/dermanosis-app/upload.png) | [![Gambar 8](https://github.com/ridhoabdi/portfolio/blob/main/images/readme-each-repository/dermanosis-app/result.png)](https://github.com/ridhoabdi/portfolio/blob/main/images/readme-each-repository/dermanosis-app/result.png) | [![Gambar 9](https://github.com/ridhoabdi/portfolio/blob/main/images/readme-each-repository/dermanosis-app/treatments.png)](https://github.com/ridhoabdi/portfolio/blob/main/images/readme-each-repository/dermanosis-app/treatments.png) |
 
 ## Here are the steps to run the Dermanosis Application:
 Open the link https://github.com/ridhoabdi/Capstone-Bangkit.git or
