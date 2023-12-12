@@ -23,6 +23,10 @@ And we expected to help time efficiency for puskesmas/medical clinic officers in
 |---------|---------|---------|
 | [![Gambar 1](https://github.com/ridhoabdi/portfolio/blob/main/images/readme-each-repository/dermanosis-app/landing-page-login.png)](https://github.com/ridhoabdi/portfolio/blob/main/images/readme-each-repository/dermanosis-app/landing-page-login.png) | [![Gambar 2](https://github.com/ridhoabdi/portfolio/blob/main/images/readme-each-repository/dermanosis-app/landing-page.png)](https://github.com/ridhoabdi/portfolio/blob/main/images/readme-each-repository/dermanosis-app/landing-page.png) | [![Gambar 3](https://github.com/ridhoabdi/portfolio/blob/main/images/readme-each-repository/dermanosis-app/landing-page-register.png)](https://github.com/ridhoabdi/portfolio/blob/main/images/readme-each-repository/dermanosis-app/landing-page-register.png) |
 
+| Guide Page | Home Page | Settings Page |
+|---------|---------|---------|
+| [![Gambar 4](https://github.com/ridhoabdi/portfolio/blob/main/images/readme-each-repository/dermanosis-app/guide.png)] | [![Gambar 5](https://github.com/ridhoabdi/portfolio/blob/main/images/readme-each-repository/dermanosis-app/home.png)] | [![Gambar 6](https://github.com/ridhoabdi/portfolio/blob/main/images/readme-each-repository/dermanosis-app/settings.png)] |
+
 another screenshots will be added
 
 ## Here are the steps to run the Dermanosis Application:
